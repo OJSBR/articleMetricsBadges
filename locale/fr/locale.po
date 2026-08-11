@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "Badges de métriques de l'article"
+
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "Affiche les badges PlumX, Dimensions et Altmetric sur les articles disposant d'un DOI. Chaque fournisseur peut être activé ou désactivé indépendamment."
+
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "Badges de métriques de l'article (barre latérale)"
+
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "Affiche les badges de métriques dans la barre latérale de la page de l'article."
+
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "Métriques"
+
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "Choisissez les fournisseurs de métriques à afficher et leur emplacement. Les badges ne sont affichés que sur les pages d'article et uniquement lorsque l'article possède un DOI."
+
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "Les paramètres des badges de métriques ont été enregistrés."
+
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "Les articles sans DOI n'affichent jamais de badge. Chaque fournisseur n'affiche que les données des DOI qu'il a déjà indexés."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "Fournisseurs de métriques"
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "Sélectionnez un ou plusieurs fournisseurs. Chaque fournisseur sélectionné charge son propre script sur la page de l'article."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "Chaque fournisseur a ses propres conditions d'utilisation. N'activez que les fournisseurs que votre revue est autorisée à afficher."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. Gratuit pour les revues en accès libre non commerciales et les dépôts régionaux, sur demande et approbation."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. Gratuit pour les chercheurs individuels et les établissements académiques enregistrés ; les éditeurs doivent conclure un accord écrit."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. Gratuit pour les pages personnelles et les dépôts institutionnels ; l'usage sur une revue exige une licence d'Altmetric."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "Chaque fournisseur activé reçoit l'adresse IP du lecteur, son navigateur et le DOI de l'article. Mentionnez-les dans la déclaration de confidentialité de la revue."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "Sélectionnez au moins un fournisseur de métriques."
+
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "Emplacement d'affichage"
+
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "Vous pouvez utiliser un emplacement ou les deux en même temps."
+
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "Sur la page de l'article"
+
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "Dans le bloc de la barre latérale"
+
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "Sélectionnez au moins un emplacement."
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "Emplacement sur la page de l'article"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "Sous le résumé"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "Dans la colonne des détails de l'article"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "En bas de la page"
+
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "Titre du bloc latéral (vide : « Métriques »)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "Options PlumX"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "Type de widget"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "Résumé"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "Détaillé"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "Icône avec fenêtre contextuelle"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "Orientation"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "Horizontale"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "Verticale"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "Largeur (par ex. 350px ; vide pour la valeur par défaut)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "Masquer le widget en l'absence de données"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "Afficher une bordure"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "Masquer l'icône d'impression"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Options Dimensions"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "Style du badge"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "Petit cercle"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "Petit rectangle"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "Grand rectangle"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "Barre"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "Masquer le badge en l'absence de citations"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Options Altmetric"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Altmetric ne suit que la presse, les blogues, les documents de politique publique et les réseaux sociaux. Les revues dont les articles ne sont pas mentionnés dans ces sources afficheront un badge vide."
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "Type de badge"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "Anneau"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "Anneau moyen"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "Barre"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "Fenêtre de détails"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "À droite"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "À gauche"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "Au-dessus"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "En dessous"
+

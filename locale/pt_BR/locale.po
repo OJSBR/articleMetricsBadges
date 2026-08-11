@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "Selos de Métricas do Artigo"
+
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "Exibe os selos do PlumX, do Dimensions e do Altmetric nos artigos que têm DOI. Cada provedor pode ser ligado ou desligado de forma independente."
+
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "Selos de Métricas do Artigo (barra lateral)"
+
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "Exibe os selos de métricas na barra lateral da página do artigo."
+
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "Métricas"
+
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "Escolha quais provedores de métricas exibir e onde eles devem aparecer. Os selos só são exibidos em páginas de artigo e apenas quando o artigo tem DOI."
+
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "As configurações dos selos de métricas foram salvas."
+
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "Artigos sem DOI nunca exibem selos. Cada provedor só mostra dados de DOIs que já indexou."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "Provedores de métricas"
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "Selecione um ou mais provedores. Cada provedor selecionado carrega o próprio script na página do artigo."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "Cada provedor tem termos de uso próprios. Habilite apenas os provedores que a sua revista está autorizada a exibir."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. Gratuito para revistas de acesso aberto não comerciais e repositórios regionais, mediante pedido e aprovação."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. Gratuito para pesquisadores individuais e instituições acadêmicas registradas; editoras precisam de acordo por escrito."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. Gratuito para páginas pessoais e repositórios institucionais; o uso em uma revista exige licença da Altmetric."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "Cada provedor habilitado recebe o IP do leitor, o navegador e o DOI do artigo. Cite-os na declaração de privacidade da revista."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "Selecione pelo menos um provedor de métricas."
+
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "Onde exibir"
+
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "Você pode usar uma posição ou as duas ao mesmo tempo."
+
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "Na página do artigo"
+
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "No bloco da barra lateral"
+
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "Selecione pelo menos uma posição."
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "Posição na página do artigo"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "Abaixo do resumo"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "Na coluna de detalhes do artigo"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "No rodapé da página"
+
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "Título do bloco lateral (em branco, usa \\\"Métricas\\\")"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "Opções do PlumX"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "Tipo de widget"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "Resumo"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "Detalhado"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "Ícone com janela flutuante"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "Orientação"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "Horizontal"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "Vertical"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "Largura (ex.: 350px; em branco, usa o padrão)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "Ocultar o widget quando não houver dados"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "Exibir borda"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "Ocultar o ícone de impressão"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Opções do Dimensions"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "Estilo do selo"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "Círculo pequeno"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "Retângulo pequeno"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "Retângulo grande"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "Barra"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "Ocultar o selo quando não houver citações"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Opções do Altmetric"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "O Altmetric acompanha apenas notícias, blogues, documentos de política pública e redes sociais. Revistas cujos artigos não são mencionados nessas fontes exibirão um selo vazio."
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "Tipo de selo"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "Rosca"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "Rosca média"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "Barra"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "Janela de detalhes"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "À direita"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "À esquerda"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "Acima"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "Abaixo"
+
