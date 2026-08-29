@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ka\n"
+
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "სტატიის მეტრიკების ნიშნები"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "აჩვენებს PlumX, Dimensions და Altmetric ნიშნებს იმ სტატიებზე, რომლებსაც აქვთ DOI. თითოეული მომწოდებელი ცალკე ჩაირთვება ან გამოირთვება."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "სტატიის მეტრიკების ნიშნები (გვერდითი პანელი)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "აჩვენებს მეტრიკების ნიშნებს სტატიის გვერდის გვერდით პანელში."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "მეტრიკები"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "აირჩიეთ, რომელი მეტრიკის მომწოდებლები გამოჩნდეს და სად. ნიშნები ჩნდება მხოლოდ სტატიის გვერდებზე და მხოლოდ მაშინ, თუ სტატიას აქვს DOI."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "მეტრიკების ნიშნების პარამეტრები შენახულია."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "DOI-ს გარეშე სტატიები ნიშნებს არასოდეს აჩვენებს. მომწოდებლები მონაცემებს მხოლოდ იმ DOI-ებისთვის აჩვენებენ, რომლებიც უკვე დაინდექსეს."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "მეტრიკების მომწოდებლები"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "აირჩიეთ ერთი ან რამდენიმე მომწოდებელი. აქ არჩეული თითოეული მომწოდებელი სტატიის გვერდზე საკუთარ სკრიპტს ტვირთავს."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "თითოეული მომწოდებელი საკუთარ სარგებლობის პირობებს ადგენს. ჩართეთ მხოლოდ ის მომწოდებლები, რომელთა ჩვენების უფლებაც თქვენს ჟურნალს აქვს."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. უფასოა არაკომერციული ღია წვდომის ჟურნალებისა და რეგიონული საცავებისთვის — მოთხოვნისა და დამტკიცების შემდეგ."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. უფასოა ცალკეული მკვლევრებისა და რეგისტრირებული აკადემიური დაწესებულებებისთვის; გამომცემლებს წერილობითი შეთანხმება სჭირდებათ."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. უფასოა პირადი გვერდებისა და ინსტიტუციური საცავებისთვის; ჟურნალში გამოსაყენებლად საჭიროა Altmetric-ის ლიცენზია."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "ყოველი ჩართული მომწოდებელი იღებს მკითხველის IP მისამართს, ბრაუზერსა და სტატიის DOI-ს. მიუთითეთ ისინი ჟურნალის კონფიდენციალურობის განცხადებაში."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "აირჩიეთ სულ მცირე ერთი მეტრიკის მომწოდებელი."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "სად გამოჩნდეს"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "შეგიძლიათ გამოიყენოთ ერთი პოზიცია ან ორივე ერთდროულად."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "სტატიის გვერდზე"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "გვერდითი პანელის ბლოკში"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "აირჩიეთ სულ მცირე ერთი პოზიცია."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "პოზიცია სტატიის გვერდზე"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "აბსტრაქტის ქვემოთ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "სტატიის დეტალების სვეტში"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "გვერდის ბოლოში"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "გვერდითი პანელის ბლოკის სათაური (დატოვეთ ცარიელი, რომ გამოიყენოს „მეტრიკები“)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "PlumX-ის პარამეტრები"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "ვიჯეტის ტიპი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "შეჯამება"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "დეტალები"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "ბეჭდვის ხატულა ამომხტომი ფანჯრით"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "ორიენტაცია"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "ჰორიზონტალური"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "ვერტიკალური"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "სიგანე (მაგ. 350px; ნაგულისხმევისთვის დატოვეთ ცარიელი)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "დამალე ვიჯეტი, როცა მონაცემები არ არის"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "ჩარჩოს ჩვენება"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "დამალე ბეჭდვის ხატულა"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Dimensions-ის პარამეტრები"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "ნიშნის სტილი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "პატარა წრე"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "პატარა ოთხკუთხედი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "დიდი ოთხკუთხედი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "ზოლი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "დამალე ნიშანი, როცა ციტირებები არ არის"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Altmetric-ის პარამეტრები"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Altmetric აკვირდება მხოლოდ სიახლეებს, ბლოგებს, პოლიტიკის დოკუმენტებსა და სოციალურ ქსელებს. ჟურნალები, რომელთა სტატიებიც ამ წყაროებში არ იხსენიება, ცარიელ ნიშანს აჩვენებენ."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "ნიშნის ტიპი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "რგოლი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "საშუალო რგოლი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "ზოლი"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "დეტალების ამომხტომი ფანჯარა"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "მარჯვნივ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "მარცხნივ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "ზემოთ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "ქვემოთ"

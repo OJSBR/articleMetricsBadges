@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: hy\n"
+
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "Հոդվածի չափանիշների կրծքանշաններ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "Ցուցադրում է PlumX, Dimensions և Altmetric կրծքանշանները DOI ունեցող հոդվածներում։ Յուրաքանչյուր մատակարար կարելի է առանձին միացնել կամ անջատել։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "Հոդվածի չափանիշների կրծքանշաններ (կողային վահանակ)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "Ցուցադրում է չափանիշների կրծքանշանները հոդվածի էջի կողային վահանակում։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "Չափանիշներ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "Ընտրեք, թե որ չափանիշների մատակարարներն են ցուցադրվելու և որտեղ։ Կրծքանշանները ցուցադրվում են միայն հոդվածների էջերում և միայն այն դեպքում, երբ հոդվածն ունի DOI։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "Չափանիշների կրծքանշանների կարգավորումները պահպանվեցին։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "Առանց DOI-ի հոդվածները երբեք կրծքանշան չեն ցուցադրում։ Մատակարարները տվյալներ ցույց են տալիս միայն արդեն ինդեքսավորած DOI-ների համար։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "Չափանիշների մատակարարներ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "Ընտրեք մեկ կամ մի քանի մատակարար։ Այստեղ ընտրված յուրաքանչյուր մատակարար հոդվածի էջում բեռնում է իր սեփական սկրիպտը։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "Յուրաքանչյուր մատակարար սահմանում է իր օգտագործման պայմանները։ Միացրեք միայն այն մատակարարներին, որոնց ցուցադրելու իրավունք ունի ձեր ամսագիրը։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier։ Անվճար է ոչ առևտրային բաց հասանելիության ամսագրերի և տարածաշրջանային պահոցների համար՝ դիմումի և հաստատման դեպքում։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science։ Անվճար է առանձին հետազոտողների և գրանցված ակադեմիական հաստատությունների համար. հրատարակիչներին անհրաժեշտ է գրավոր համաձայնագիր։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric։ Անվճար է անձնական էջերի և հաստատությունների պահոցների համար. ամսագրում օգտագործելու համար պահանջվում է Altmetric-ի արտոնագիր։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "Ձեր միացրած յուրաքանչյուր մատակարար ստանում է ընթերցողի IP հասցեն, դիտարկիչը և հոդվածի DOI-ը։ Նշեք դրանք ամսագրի գաղտնիության հայտարարության մեջ։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "Ընտրեք առնվազն մեկ չափանիշների մատակարար։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "Որտեղ ցուցադրել"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "Կարող եք օգտագործել մեկ դիրք կամ երկուսը միաժամանակ։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "Հոդվածի էջում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "Կողային վահանակի բլոկում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "Ընտրեք առնվազն մեկ դիրք։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "Դիրքը հոդվածի էջում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "Ամփոփման տակ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "Հոդվածի մանրամասների սյունակում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "Էջի ներքևում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "Կողային վահանակի բլոկի վերնագիրը (թողեք դատարկ՝ «Չափանիշներ» օգտագործելու համար)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "PlumX-ի ընտրանքներ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "Վիջեթի տեսակ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "Ամփոփում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "Մանրամասներ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "Տպելու պատկերակ ելնող պատուհանով"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "Կողմնորոշում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "Հորիզոնական"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "Ուղղահայաց"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "Լայնություն (օր.՝ 350px; կանխադրվածի համար թողեք դատարկ)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "Թաքցնել վիջեթը, երբ տվյալներ չկան"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "Ցուցադրել եզրագիծ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "Թաքցնել տպելու պատկերակը"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Dimensions-ի ընտրանքներ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "Կրծքանշանի ոճ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "Փոքր շրջան"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "Փոքր ուղղանկյուն"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "Մեծ ուղղանկյուն"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "Գոտի"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "Թաքցնել կրծքանշանը, երբ հղումներ չկան"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Altmetric-ի ընտրանքներ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Altmetric-ը հետևում է միայն նորություններին, բլոգներին, քաղաքականության փաստաթղթերին և սոցիալական ցանցերին։ Այն ամսագրերը, որոնց հոդվածները չեն հիշատակվում այդ աղբյուրներում, կցուցադրեն դատարկ կրծքանշան։"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "Կրծքանշանի տեսակ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "Օղակ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "Միջին օղակ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "Գոտի"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "Մանրամասների ելնող պատուհան"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "Աջ կողմում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "Ձախ կողմում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "Վերևում"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "Ներքևում"

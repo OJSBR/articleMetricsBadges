@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: bg\n"
+
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "Значки с показатели за статията"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "Показва значките на PlumX, Dimensions и Altmetric в статии с DOI. Всеки доставчик може да се включва и изключва поотделно."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "Значки с показатели за статията (странична лента)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "Показва значките с показатели в страничната лента на страницата на статията."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "Показатели"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "Изберете кои доставчици на показатели да се показват и къде. Значките се извеждат само на страници на статии и само когато статията има DOI."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "Настройките на значките с показатели са запазени."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "Статии без DOI никога не показват значки. Доставчиците показват данни само за DOI, които вече са индексирали."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "Доставчици на показатели"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "Изберете един или повече доставчици. Всеки избран тук доставчик зарежда собствен скрипт на страницата на статията."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "Всеки доставчик определя собствени условия за ползване. Включвайте само доставчиците, които списанието ви има право да показва."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. Безплатно за нетърговски списания с отворен достъп и регионални хранилища, при заявка и одобрение."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. Безплатно за отделни изследователи и регистрирани академични институции; издателите се нуждаят от писмено споразумение."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. Безплатно за лични страници и институционални хранилища; използването в списание изисква лиценз от Altmetric."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "Всеки включен доставчик получава IP адреса на читателя, браузъра му и DOI на статията. Споменете ги в декларацията за поверителност на списанието."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "Изберете поне един доставчик на показатели."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "Къде да се показва"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "Може да използвате една позиция или и двете едновременно."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "На страницата на статията"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "В блока на страничната лента"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "Изберете поне една позиция."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "Позиция на страницата на статията"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "Под резюмето"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "В колоната с детайли на статията"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "В долната част на страницата"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "Заглавие на блока в страничната лента (оставете празно, за да се използва \\\"Показатели\\\")"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "Опции за PlumX"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "Тип на приспособлението"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "Обобщение"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "Подробности"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "Икона за печат с изскачащ прозорец"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "Ориентация"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "Хоризонтално"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "Вертикално"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "Ширина (например 350px; оставете празно за стойността по подразбиране)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "Скриване на приспособлението, когато няма данни"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "Показване на рамка"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "Скриване на иконата за печат"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Опции за Dimensions"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "Стил на значката"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "Малък кръг"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "Малък правоъгълник"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "Голям правоъгълник"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "Лента"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "Скриване на значката, когато няма цитирания"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Опции за Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Altmetric следи само новини, блогове, политически документи и социални мрежи. Списания, чиито статии не се споменават в тези източници, ще показват празна значка."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "Тип на значката"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "Поничка"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "Средна поничка"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "Лента"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "Изскачащ прозорец с подробности"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "Отдясно"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "Отляво"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "Отгоре"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "Отдолу"

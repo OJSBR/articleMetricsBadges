@@ -1,188 +1,245 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: tr\n"
 
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.displayName"
-msgstr "Selos de Métricas do Artigo"
+msgstr "Makale Metrik Rozetleri"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.description"
-msgstr "Exibe os selos do PlumX, do Dimensions e do Altmetric nos artigos que têm DOI. Cada provedor pode ser ligado ou desligado de forma independente."
+msgstr "DOI'si olan makalelerde PlumX, Dimensions ve Altmetric rozetlerini gösterir. Her sağlayıcı ayrı ayrı açılıp kapatılabilir."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.displayName"
-msgstr "Selos de Métricas do Artigo (barra lateral)"
+msgstr "Makale Metrik Rozetleri (yan çubuk)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.description"
-msgstr "Exibe os selos de métricas na barra lateral da página do artigo."
+msgstr "Metrik rozetlerini makale sayfasının yan çubuğunda gösterir."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
-msgstr "Métricas"
+msgstr "Metrikler"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.description"
-msgstr "Escolha quais provedores de métricas exibir e onde eles devem aparecer. Os selos só são exibidos em páginas de artigo e apenas quando o artigo tem DOI."
+msgstr "Hangi metrik sağlayıcılarının nerede gösterileceğini seçin. Rozetler yalnızca makale sayfalarında ve yalnızca makalenin DOI'si varsa çizilir."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.saved"
-msgstr "As configurações dos selos de métricas foram salvas."
+msgstr "Metrik rozetlerinin ayarları kaydedildi."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
-msgstr "Artigos sem DOI nunca exibem selos. Cada provedor só mostra dados de DOIs que já indexou."
+msgstr "DOI'si olmayan makalelerde rozet hiçbir zaman görünmez. Sağlayıcılar yalnızca daha önce dizinledikleri DOI'ler için veri gösterir."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers"
-msgstr "Provedores de métricas"
+msgstr "Metrik sağlayıcıları"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
-msgstr "Selecione um ou mais provedores. Cada provedor selecionado carrega o próprio script na página do artigo."
+msgstr "Bir veya daha fazla sağlayıcı seçin. Burada seçilen her sağlayıcı, makale sayfasında kendi betiğini yükler."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
 msgstr "PlumX (Elsevier)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
 msgstr "Dimensions (Digital Science)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
 msgstr "Altmetric"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
-msgstr "Cada provedor tem termos de uso próprios. Habilite apenas os provedores que a sua revista está autorizada a exibir."
+msgstr "Her sağlayıcının kendi kullanım koşulları vardır. Yalnızca derginizin göstermeye yetkili olduğu sağlayıcıları etkinleştirin."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
-msgstr "Elsevier. Gratuito para revistas de acesso aberto não comerciais e repositórios regionais, mediante pedido e aprovação."
+msgstr "Elsevier. Ticari olmayan açık erişim dergileri ve bölgesel arşivler için, başvuru ve onay ile ücretsizdir."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
-msgstr "Digital Science. Gratuito para pesquisadores individuais e instituições acadêmicas registradas; editoras precisam de acordo por escrito."
+msgstr "Digital Science. Bireysel araştırmacılar ve kayıtlı akademik kurumlar için ücretsizdir; yayıncıların yazılı bir anlaşma yapması gerekir."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
-msgstr "Altmetric. Gratuito para páginas pessoais e repositórios institucionais; o uso em uma revista exige licença da Altmetric."
+msgstr "Altmetric. Kişisel sayfalar ve kurumsal arşivler için ücretsizdir; bir dergide kullanmak Altmetric'ten lisans gerektirir."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
-msgstr "Cada provedor habilitado recebe o IP do leitor, o navegador e o DOI do artigo. Cite-os na declaração de privacidade da revista."
+msgstr "Etkinleştirdiğiniz her sağlayıcı, okurun IP adresini, tarayıcısını ve makalenin DOI'sini alır. Bunları derginin gizlilik bildiriminde belirtin."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
-msgstr "Selecione pelo menos um provedor de métricas."
+msgstr "En az bir metrik sağlayıcısı seçin."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positions"
-msgstr "Onde exibir"
+msgstr "Nerede gösterilsin"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
-msgstr "Você pode usar uma posição ou as duas ao mesmo tempo."
+msgstr "Tek bir konumu ya da her ikisini birden kullanabilirsiniz."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.showInline"
-msgstr "Na página do artigo"
+msgstr "Makale sayfasında"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
-msgstr "No bloco da barra lateral"
+msgstr "Yan çubuk bloğunda"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
-msgstr "Selecione pelo menos uma posição."
+msgstr "En az bir konum seçin."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
-msgstr "Posição na página do artigo"
+msgstr "Makale sayfasındaki konum"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
-msgstr "Abaixo do resumo"
+msgstr "Özetin altında"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
-msgstr "Na coluna de detalhes do artigo"
+msgstr "Makale ayrıntıları sütununda"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
-msgstr "No rodapé da página"
+msgstr "Sayfanın altında"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
-msgstr "Título do bloco lateral (em branco, usa \\\"Métricas\\\")"
+msgstr "Yan çubuk bloğunun başlığı (\\\"Metrikler\\\" kullanmak için boş bırakın)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx"
-msgstr "Opções do PlumX"
+msgstr "PlumX seçenekleri"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
-msgstr "Tipo de widget"
+msgstr "Araç türü"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
-msgstr "Resumo"
+msgstr "Özet"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
-msgstr "Detalhado"
+msgstr "Ayrıntılar"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
-msgstr "Ícone com janela flutuante"
+msgstr "Açılır pencereli yazdırma simgesi"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
-msgstr "Orientação"
+msgstr "Yönelim"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
-msgstr "Horizontal"
+msgstr "Yatay"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
-msgstr "Vertical"
+msgstr "Dikey"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
-msgstr "Largura (ex.: 350px; em branco, usa o padrão)"
+msgstr "Genişlik (örn. 350px; varsayılan için boş bırakın)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
-msgstr "Ocultar o widget quando não houver dados"
+msgstr "Veri yokken aracı gizle"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
-msgstr "Exibir borda"
+msgstr "Kenarlık göster"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
-msgstr "Ocultar o ícone de impressão"
+msgstr "Yazdırma simgesini gizle"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
-msgstr "Opções do Dimensions"
+msgstr "Dimensions seçenekleri"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
-msgstr "Estilo do selo"
+msgstr "Rozet stili"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
-msgstr "Círculo pequeno"
+msgstr "Küçük daire"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
-msgstr "Retângulo pequeno"
+msgstr "Küçük dikdörtgen"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
-msgstr "Retângulo grande"
+msgstr "Büyük dikdörtgen"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
-msgstr "Barra"
+msgstr "Çubuk"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
-msgstr "Ocultar o selo quando não houver citações"
+msgstr "Atıf yokken rozeti gizle"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
-msgstr "Opções do Altmetric"
+msgstr "Altmetric seçenekleri"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
-msgstr "O Altmetric acompanha apenas notícias, blogues, documentos de política pública e redes sociais. Revistas cujos artigos não são mencionados nessas fontes exibirão um selo vazio."
+msgstr "Altmetric yalnızca haberleri, blogları, politika belgelerini ve sosyal medyayı izler. Makaleleri bu kaynaklarda anılmayan dergilerde rozet boş görünür."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
-msgstr "Tipo de selo"
+msgstr "Rozet türü"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
-msgstr "Rosca"
+msgstr "Halka"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
-msgstr "Rosca média"
+msgstr "Orta halka"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
-msgstr "Barra"
+msgstr "Çubuk"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
-msgstr "Janela de detalhes"
+msgstr "Ayrıntı açılır penceresi"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
-msgstr "À direita"
+msgstr "Sağda"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
-msgstr "À esquerda"
+msgstr "Solda"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
-msgstr "Acima"
+msgstr "Üstte"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
-msgstr "Abaixo"
+msgstr "Altta"

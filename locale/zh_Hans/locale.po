@@ -1,188 +1,245 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: zh_Hans\n"
 
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.displayName"
-msgstr "Selos de Métricas do Artigo"
+msgstr "文章计量徽章"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.description"
-msgstr "Exibe os selos do PlumX, do Dimensions e do Altmetric nos artigos que têm DOI. Cada provedor pode ser ligado ou desligado de forma independente."
+msgstr "在带 DOI 的文章上显示 PlumX、Dimensions 和 Altmetric 徽章。每个提供方可单独开启或关闭。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.displayName"
-msgstr "Selos de Métricas do Artigo (barra lateral)"
+msgstr "文章计量徽章（侧边栏）"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.description"
-msgstr "Exibe os selos de métricas na barra lateral da página do artigo."
+msgstr "在文章页面的侧边栏显示计量徽章。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
-msgstr "Métricas"
+msgstr "计量"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.description"
-msgstr "Escolha quais provedores de métricas exibir e onde eles devem aparecer. Os selos só são exibidos em páginas de artigo e apenas quando o artigo tem DOI."
+msgstr "选择要展示哪些计量数据提供方以及展示位置。徽章仅在文章页面渲染，且仅当文章拥有 DOI 时。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.saved"
-msgstr "As configurações dos selos de métricas foram salvas."
+msgstr "计量徽章设置已保存。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
-msgstr "Artigos sem DOI nunca exibem selos. Cada provedor só mostra dados de DOIs que já indexou."
+msgstr "没有 DOI 的文章绝不会显示徽章。各提供方只对其已收录的 DOI 展示数据。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers"
-msgstr "Provedores de métricas"
+msgstr "计量数据提供方"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
-msgstr "Selecione um ou mais provedores. Cada provedor selecionado carrega o próprio script na página do artigo."
+msgstr "选择一个或多个提供方。此处选中的每个提供方都会在文章页面加载各自的脚本。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
 msgstr "PlumX (Elsevier)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
 msgstr "Dimensions (Digital Science)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
 msgstr "Altmetric"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
-msgstr "Cada provedor tem termos de uso próprios. Habilite apenas os provedores que a sua revista está autorizada a exibir."
+msgstr "每个提供方都有各自的使用条款。只启用贵刊有权展示的提供方。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
-msgstr "Elsevier. Gratuito para revistas de acesso aberto não comerciais e repositórios regionais, mediante pedido e aprovação."
+msgstr "Elsevier。对非商业性开放获取期刊和区域性知识库，经申请并获批后免费。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
-msgstr "Digital Science. Gratuito para pesquisadores individuais e instituições acadêmicas registradas; editoras precisam de acordo por escrito."
+msgstr "Digital Science。对个人研究者和已注册的学术机构免费；出版社需签订书面协议。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
-msgstr "Altmetric. Gratuito para páginas pessoais e repositórios institucionais; o uso em uma revista exige licença da Altmetric."
+msgstr "Altmetric。对个人主页和机构知识库免费；在期刊上使用需要 Altmetric 的授权许可。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
-msgstr "Cada provedor habilitado recebe o IP do leitor, o navegador e o DOI do artigo. Cite-os na declaração de privacidade da revista."
+msgstr "每个启用的提供方都会收到读者的 IP 地址、浏览器信息和文章 DOI。请在期刊的隐私声明中说明这一点。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
-msgstr "Selecione pelo menos um provedor de métricas."
+msgstr "请至少选择一个计量数据提供方。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positions"
-msgstr "Onde exibir"
+msgstr "显示位置"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
-msgstr "Você pode usar uma posição ou as duas ao mesmo tempo."
+msgstr "可以只用一个位置，也可以两个同时使用。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.showInline"
-msgstr "Na página do artigo"
+msgstr "文章页面上"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
-msgstr "No bloco da barra lateral"
+msgstr "侧边栏区块中"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
-msgstr "Selecione pelo menos uma posição."
+msgstr "请至少选择一个位置。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
-msgstr "Posição na página do artigo"
+msgstr "在文章页面上的位置"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
-msgstr "Abaixo do resumo"
+msgstr "摘要下方"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
-msgstr "Na coluna de detalhes do artigo"
+msgstr "文章详情栏中"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
-msgstr "No rodapé da página"
+msgstr "页面底部"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
-msgstr "Título do bloco lateral (em branco, usa \\\"Métricas\\\")"
+msgstr "侧边栏区块标题（留空则使用“计量”）"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx"
-msgstr "Opções do PlumX"
+msgstr "PlumX 选项"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
-msgstr "Tipo de widget"
+msgstr "小工具类型"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
-msgstr "Resumo"
+msgstr "摘要视图"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
-msgstr "Detalhado"
+msgstr "详情"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
-msgstr "Ícone com janela flutuante"
+msgstr "带弹窗的打印图标"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
-msgstr "Orientação"
+msgstr "方向"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
-msgstr "Horizontal"
+msgstr "横向"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
-msgstr "Vertical"
+msgstr "纵向"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
-msgstr "Largura (ex.: 350px; em branco, usa o padrão)"
+msgstr "宽度（例如 350px；留空则用默认值）"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
-msgstr "Ocultar o widget quando não houver dados"
+msgstr "没有数据时隐藏小工具"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
-msgstr "Exibir borda"
+msgstr "显示边框"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
-msgstr "Ocultar o ícone de impressão"
+msgstr "隐藏打印图标"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
-msgstr "Opções do Dimensions"
+msgstr "Dimensions 选项"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
-msgstr "Estilo do selo"
+msgstr "徽章样式"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
-msgstr "Círculo pequeno"
+msgstr "小圆形"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
-msgstr "Retângulo pequeno"
+msgstr "小矩形"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
-msgstr "Retângulo grande"
+msgstr "大矩形"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
-msgstr "Barra"
+msgstr "条形"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
-msgstr "Ocultar o selo quando não houver citações"
+msgstr "没有被引时隐藏徽章"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
-msgstr "Opções do Altmetric"
+msgstr "Altmetric 选项"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
-msgstr "O Altmetric acompanha apenas notícias, blogues, documentos de política pública e redes sociais. Revistas cujos artigos não são mencionados nessas fontes exibirão um selo vazio."
+msgstr "Altmetric 只追踪新闻、博客、政策文件和社交媒体。若期刊的文章未被这些来源提及，徽章将显示为空。"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
-msgstr "Tipo de selo"
+msgstr "徽章类型"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
-msgstr "Rosca"
+msgstr "环形"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
-msgstr "Rosca média"
+msgstr "中号环形"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
-msgstr "Barra"
+msgstr "条形"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
-msgstr "Janela de detalhes"
+msgstr "详情浮窗"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
-msgstr "À direita"
+msgstr "靠右"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
-msgstr "À esquerda"
+msgstr "靠左"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
-msgstr "Acima"
+msgstr "上方"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
-msgstr "Abaixo"
+msgstr "下方"

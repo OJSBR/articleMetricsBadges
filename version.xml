@@ -12,8 +12,8 @@
 <version>
 	<application>articleMetricsBadges</application>
 	<type>plugins.generic</type>
-	<release>1.1.0.0</release>
-	<date>2026-08-10</date>
+	<release>1.1.0.1</release>
+	<date>2026-08-29</date>
 	<lazy-load>1</lazy-load>
 	<class>ArticleMetricsBadgesPlugin</class>
 </version>

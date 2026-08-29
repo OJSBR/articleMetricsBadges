@@ -1,188 +1,245 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: sv\n"
 
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.displayName"
-msgstr "Selos de Métricas do Artigo"
+msgstr "Artikelmetrik-märken"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.description"
-msgstr "Exibe os selos do PlumX, do Dimensions e do Altmetric nos artigos que têm DOI. Cada provedor pode ser ligado ou desligado de forma independente."
+msgstr "Visar PlumX-, Dimensions- och Altmetric-märken på artiklar som har ett DOI. Varje leverantör kan slås på eller av separat."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.displayName"
-msgstr "Selos de Métricas do Artigo (barra lateral)"
+msgstr "Artikelmetrik-märken (sidofält)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.description"
-msgstr "Exibe os selos de métricas na barra lateral da página do artigo."
+msgstr "Visar metrikmärkena i sidofältet på artikelsidan."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
-msgstr "Métricas"
+msgstr "Metriker"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.description"
-msgstr "Escolha quais provedores de métricas exibir e onde eles devem aparecer. Os selos só são exibidos em páginas de artigo e apenas quando o artigo tem DOI."
+msgstr "Välj vilka metrikleverantörer som ska visas och var. Märkena ritas bara på artikelsidor och bara när artikeln har ett DOI."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.saved"
-msgstr "As configurações dos selos de métricas foram salvas."
+msgstr "Inställningarna för metrikmärkena har sparats."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
-msgstr "Artigos sem DOI nunca exibem selos. Cada provedor só mostra dados de DOIs que já indexou."
+msgstr "Artiklar utan DOI visar aldrig märken. Leverantörerna visar bara data för DOI:er de redan har indexerat."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers"
-msgstr "Provedores de métricas"
+msgstr "Metrikleverantörer"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
-msgstr "Selecione um ou mais provedores. Cada provedor selecionado carrega o próprio script na página do artigo."
+msgstr "Välj en eller flera leverantörer. Varje leverantör du väljer här läser in sitt eget skript på artikelsidan."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
 msgstr "PlumX (Elsevier)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
 msgstr "Dimensions (Digital Science)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
 msgstr "Altmetric"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
-msgstr "Cada provedor tem termos de uso próprios. Habilite apenas os provedores que a sua revista está autorizada a exibir."
+msgstr "Varje leverantör har egna användarvillkor. Aktivera bara de leverantörer som din tidskrift har rätt att visa."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
-msgstr "Elsevier. Gratuito para revistas de acesso aberto não comerciais e repositórios regionais, mediante pedido e aprovação."
+msgstr "Elsevier. Kostnadsfritt för icke-kommersiella open access-tidskrifter och regionala arkiv, efter ansökan och godkännande."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
-msgstr "Digital Science. Gratuito para pesquisadores individuais e instituições acadêmicas registradas; editoras precisam de acordo por escrito."
+msgstr "Digital Science. Kostnadsfritt för enskilda forskare och registrerade akademiska institutioner; förlag behöver ett skriftligt avtal."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
-msgstr "Altmetric. Gratuito para páginas pessoais e repositórios institucionais; o uso em uma revista exige licença da Altmetric."
+msgstr "Altmetric. Kostnadsfritt för personliga sidor och institutionella arkiv; användning i en tidskrift kräver licens från Altmetric."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
-msgstr "Cada provedor habilitado recebe o IP do leitor, o navegador e o DOI do artigo. Cite-os na declaração de privacidade da revista."
+msgstr "Varje leverantör du aktiverar får läsarens IP-adress, webbläsare och artikelns DOI. Nämn dem i tidskriftens integritetspolicy."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
-msgstr "Selecione pelo menos um provedor de métricas."
+msgstr "Välj minst en metrikleverantör."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positions"
-msgstr "Onde exibir"
+msgstr "Var det ska visas"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
-msgstr "Você pode usar uma posição ou as duas ao mesmo tempo."
+msgstr "Du kan använda en placering eller båda samtidigt."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.showInline"
-msgstr "Na página do artigo"
+msgstr "På artikelsidan"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
-msgstr "No bloco da barra lateral"
+msgstr "I sidofältsblocket"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
-msgstr "Selecione pelo menos uma posição."
+msgstr "Välj minst en placering."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
-msgstr "Posição na página do artigo"
+msgstr "Placering på artikelsidan"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
-msgstr "Abaixo do resumo"
+msgstr "Under sammanfattningen"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
-msgstr "Na coluna de detalhes do artigo"
+msgstr "I artikelns detaljkolumn"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
-msgstr "No rodapé da página"
+msgstr "Längst ned på sidan"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
-msgstr "Título do bloco lateral (em branco, usa \\\"Métricas\\\")"
+msgstr "Rubrik för sidofältsblocket (lämna tomt för att använda ”Metriker”)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx"
-msgstr "Opções do PlumX"
+msgstr "PlumX-alternativ"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
-msgstr "Tipo de widget"
+msgstr "Widgettyp"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
-msgstr "Resumo"
+msgstr "Sammanfattning"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
-msgstr "Detalhado"
+msgstr "Detaljer"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
-msgstr "Ícone com janela flutuante"
+msgstr "Utskriftsikon med popup"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
-msgstr "Orientação"
+msgstr "Orientering"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
-msgstr "Horizontal"
+msgstr "Vågrätt"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
-msgstr "Vertical"
+msgstr "Lodrätt"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
-msgstr "Largura (ex.: 350px; em branco, usa o padrão)"
+msgstr "Bredd (t.ex. 350px; lämna tomt för standardvärdet)"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
-msgstr "Ocultar o widget quando não houver dados"
+msgstr "Dölj widgeten när det inte finns några data"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
-msgstr "Exibir borda"
+msgstr "Visa en ram"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
-msgstr "Ocultar o ícone de impressão"
+msgstr "Dölj utskriftsikonen"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
-msgstr "Opções do Dimensions"
+msgstr "Dimensions-alternativ"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
-msgstr "Estilo do selo"
+msgstr "Märkets stil"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
-msgstr "Círculo pequeno"
+msgstr "Liten cirkel"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
-msgstr "Retângulo pequeno"
+msgstr "Liten rektangel"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
-msgstr "Retângulo grande"
+msgstr "Stor rektangel"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
-msgstr "Barra"
+msgstr "Stapel"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
-msgstr "Ocultar o selo quando não houver citações"
+msgstr "Dölj märket när det inte finns några citeringar"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
-msgstr "Opções do Altmetric"
+msgstr "Altmetric-alternativ"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
-msgstr "O Altmetric acompanha apenas notícias, blogues, documentos de política pública e redes sociais. Revistas cujos artigos não são mencionados nessas fontes exibirão um selo vazio."
+msgstr "Altmetric följer bara nyheter, bloggar, policydokument och sociala medier. Tidskrifter vars artiklar inte nämns i dessa källor visar ett tomt märke."
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
-msgstr "Tipo de selo"
+msgstr "Märkets typ"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
-msgstr "Rosca"
+msgstr "Ring"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
-msgstr "Rosca média"
+msgstr "Mellanstor ring"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
-msgstr "Barra"
+msgstr "Stapel"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
-msgstr "Janela de detalhes"
+msgstr "Detaljfönster"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
-msgstr "À direita"
+msgstr "Till höger"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
-msgstr "À esquerda"
+msgstr "Till vänster"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
-msgstr "Acima"
+msgstr "Ovanför"
 
+#, fuzzy
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
-msgstr "Abaixo"
+msgstr "Nedanför"

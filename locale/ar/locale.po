@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ar\n"
+
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "شارات مؤشرات المقال"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "يعرض شارات PlumX وDimensions وAltmetric في المقالات التي لها DOI. ويمكن تفعيل كل مزوّد أو تعطيله على حدة."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "شارات مؤشرات المقال (الشريط الجانبي)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "يعرض شارات المؤشرات في الشريط الجانبي لصفحة المقال."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "المؤشرات"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "اختر مزوّدي المؤشرات الذين ستعرضهم وأين يظهرون. ولا تُعرض الشارات إلا في صفحات المقالات، وفقط عندما يكون للمقال DOI."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "حُفظت إعدادات شارات المؤشرات."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "لا تُعرض الشارات أبداً في المقالات التي لا DOI لها. ولا يعرض المزوّدون بيانات إلا لمعرّفات DOI التي فهرسوها فعلاً."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "مزوّدو المؤشرات"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "اختر مزوّداً واحداً أو أكثر. وكل مزوّد تحدّده هنا يحمّل سكربته الخاص في صفحة المقال."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "يضع كل مزوّد شروط استخدامه الخاصة. فعّل فقط المزوّدين المصرَّح لمجلتك بعرضهم."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. مجاني للمجلات المفتوحة الوصول غير التجارية والمستودعات الإقليمية، بناءً على طلب وموافقة."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. مجاني للباحثين الأفراد والمؤسسات الأكاديمية المسجَّلة؛ أما الناشرون فيحتاجون إلى اتفاق مكتوب."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. مجاني للصفحات الشخصية والمستودعات المؤسسية؛ أما استخدامه في مجلة فيتطلّب ترخيصاً من Altmetric."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "كل مزوّد تفعّله يتلقّى عنوان IP الخاص بالقارئ ومتصفحه ومعرّف DOI للمقال. اذكرهم في بيان الخصوصية الخاص بالمجلة."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "اختر مزوّد مؤشرات واحداً على الأقل."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "مكان العرض"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "يمكنك استخدام موضع واحد أو الاثنين معاً."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "في صفحة المقال"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "في مربّع الشريط الجانبي"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "اختر موضعاً واحداً على الأقل."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "الموضع في صفحة المقال"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "أسفل الملخّص"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "في عمود تفاصيل المقال"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "في أسفل الصفحة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "عنوان مربّع الشريط الجانبي (اتركه فارغاً لاستخدام \\\"المؤشرات\\\")"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "خيارات PlumX"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "نوع الأداة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "ملخّص"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "التفاصيل"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "أيقونة طباعة مع نافذة منبثقة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "المحاذاة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "أفقي"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "عمودي"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "العرض (مثلاً 350px؛ اتركه فارغاً للقيمة الافتراضية)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "إخفاء الأداة عند عدم وجود بيانات"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "عرض إطار"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "إخفاء أيقونة الطباعة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "خيارات Dimensions"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "نمط الشارة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "دائرة صغيرة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "مستطيل صغير"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "مستطيل كبير"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "شريط"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "إخفاء الشارة عند عدم وجود استشهادات"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "خيارات Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "لا يتتبّع Altmetric سوى الأخبار والمدونات ووثائق السياسات ووسائل التواصل الاجتماعي. أما المجلات التي لا تُذكر مقالاتها في تلك المصادر فستعرض شارة فارغة."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "نوع الشارة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "حلقة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "حلقة متوسطة"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "شريط"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "نافذة منبثقة بالتفاصيل"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "إلى اليمين"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "إلى اليسار"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "أعلى"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "أسفل"
