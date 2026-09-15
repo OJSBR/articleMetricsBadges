@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/articleMetricsBadges/ArticleMetricsBadgesPlugin.php
  *
- * Copyright (c) 2026 OJSBR - STNT Tecnologia da Informacao LTDA
- * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleMetricsBadgesPlugin
  *
@@ -15,7 +15,8 @@ namespace APP\plugins\generic\articleMetricsBadges;
 
 use APP\core\Application;
 use APP\template\TemplateManager;
-use PKP\config\Config;
+use APP\notification\Notification;
+use APP\notification\NotificationManager;
 use PKP\core\JSONMessage;
 use PKP\core\PKPPageRouter;
 use PKP\linkAction\LinkAction;
@@ -26,49 +27,47 @@ use PKP\plugins\PluginRegistry;
 
 class ArticleMetricsBadgesPlugin extends GenericPlugin
 {
-    /** Appended to the stylesheet URL so that a released change reaches browsers that cached the old file. */
-    public const STYLE_VERSION = '1.1.0';
-
     /**
      * The providers supported by this plugin. The key is used both as the
      * settings prefix (e.g. plumxEnabled) and as the template variable prefix.
      */
-    public static array $providers = ['plumx', 'dimensions', 'altmetric'];
+    public const PROVIDERS = ['plumx', 'dimensions', 'altmetric'];
 
     /**
      * Template hooks available for the inline badges, keyed by the value
      * stored in the inlineHook setting.
      */
-    public static array $inlineHooks = [
+    public const INLINE_HOOKS = [
         'main' => 'Templates::Article::Main',
         'details' => 'Templates::Article::Details',
         'footer' => 'Templates::Article::Footer::PageFooter',
     ];
 
+    /** The script of each provider, loaded by the reader's browser from the provider. */
+    public const PROVIDER_SCRIPTS = [
+        'plumx' => 'https://cdn.plu.mx/widget-all.js',
+        'dimensions' => 'https://badge.dimensions.ai/badge.js',
+        'altmetric' => 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js',
+    ];
+
     /**
      * @copydoc Plugin::register()
+     *
+     * @param null|mixed $mainContextId
      */
     public function register($category, $path, $mainContextId = null)
     {
         $success = parent::register($category, $path, $mainContextId);
-        if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
-            return true;
-        }
-
-        if ($success && $this->getEnabled($mainContextId)) {
+        if ($success && !Application::isUnderMaintenance() && $this->getEnabled($mainContextId)) {
             // The provider scripts are loaded from here so that the plugin does not
             // depend on the active theme calling the page footer hook.
             Hook::add('TemplateManager::display', [$this, 'loadProviderScripts']);
 
-            foreach (self::$inlineHooks as $hookName) {
+            foreach (self::INLINE_HOOKS as $hookName) {
                 Hook::add($hookName, [$this, 'insertInlineBadges']);
             }
 
-            PluginRegistry::register(
-                'blocks',
-                new ArticleMetricsBadgesBlockPlugin($this->getName(), $this->getPluginPath()),
-                $this->getPluginPath()
-            );
+            PluginRegistry::register('blocks', new ArticleMetricsBadgesBlockPlugin($this), $this->getPluginPath());
         }
 
         return $success;
@@ -96,7 +95,7 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin
     public function getEnabledProviders(?int $contextId): array
     {
         $enabled = [];
-        foreach (self::$providers as $provider) {
+        foreach (self::PROVIDERS as $provider) {
             if ($this->getSetting($contextId, $provider . 'Enabled')) {
                 $enabled[] = $provider;
             }
@@ -113,24 +112,29 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin
      */
     public function getArticleDoi($templateMgr, ?int $contextId): ?string
     {
+        if (!$this->isArticlePage() || !$this->getEnabledProviders($contextId)) {
+            return null;
+        }
+
+        // The version of the article being displayed, which may be an older one.
+        $publication = $templateMgr->getTemplateVars('publication') ?: $templateMgr->getTemplateVars('article')?->getCurrentPublication();
+        if (!$publication) {
+            return null;
+        }
+
+        $doi = $publication->getDoi();
+        return $doi ?: null;
+    }
+
+    /**
+     * Whether the request is for the article page. getRequestedPage() only exists on the
+     * page router: every backend AJAX request runs through the component router.
+     */
+    protected function isArticlePage(): bool
+    {
         $request = Application::get()->getRequest();
         $router = $request->getRouter();
-        // getRequestedPage() only exists on the page router: every backend AJAX
-        // request runs through the component router and must be ignored here.
-        if (!($router instanceof PKPPageRouter) || $router->getRequestedPage($request) != 'article') {
-            return null;
-        }
-        if (!$this->getEnabledProviders($contextId)) {
-            return null;
-        }
-
-        $submission = $templateMgr->getTemplateVars('article');
-        if (!$submission) {
-            return null;
-        }
-
-        $doi = $submission->getStoredPubId('doi');
-        return $doi ?: null;
+        return $router instanceof PKPPageRouter && $router->getRequestedPage($request) === 'article';
     }
 
     /**
@@ -143,35 +147,21 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin
         $templateMgr = $args[0];
         $request = Application::get()->getRequest();
         $context = $request->getContext();
-        if (!$context) {
-            return false;
+        if (!$context || !$this->getArticleDoi($templateMgr, $context->getId())) {
+            return Hook::CONTINUE;
         }
-
-        if (!$this->getArticleDoi($templateMgr, $context->getId())) {
-            return false;
-        }
-
-        $scripts = [
-            'plumx' => 'https://cdn.plu.mx/widget-all.js',
-            'dimensions' => 'https://badge.dimensions.ai/badge.js',
-            'altmetric' => 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js',
-        ];
 
         foreach ($this->getEnabledProviders($context->getId()) as $provider) {
-            $templateMgr->addJavaScript(
-                'articleMetricsBadges-' . $provider,
-                $scripts[$provider],
-                ['contexts' => 'frontend']
-            );
+            $templateMgr->addJavaScript('articleMetricsBadges-' . $provider, self::PROVIDER_SCRIPTS[$provider], ['contexts' => 'frontend']);
         }
 
         $templateMgr->addStyleSheet(
             'articleMetricsBadges',
-            $request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/badges.css?v=' . self::STYLE_VERSION,
+            $request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/badges.css',
             ['contexts' => 'frontend']
         );
 
-        return false;
+        return Hook::CONTINUE;
     }
 
     /**
@@ -185,30 +175,30 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin
         $request = Application::get()->getRequest();
         $context = $request->getContext();
         if (!$context) {
-            return false;
+            return Hook::CONTINUE;
         }
 
         $contextId = $context->getId();
         if (!$this->getSetting($contextId, 'showInline')) {
-            return false;
+            return Hook::CONTINUE;
         }
 
         $chosenHook = $this->getSetting($contextId, 'inlineHook');
-        if (!isset(self::$inlineHooks[$chosenHook]) || self::$inlineHooks[$chosenHook] != $hookName) {
-            return false;
+        if ((self::INLINE_HOOKS[$chosenHook] ?? null) !== $hookName) {
+            return Hook::CONTINUE;
         }
 
         $templateMgr = TemplateManager::getManager($request);
         $doi = $this->getArticleDoi($templateMgr, $contextId);
         if (!$doi) {
-            return false;
+            return Hook::CONTINUE;
         }
 
         $this->assignBadgeVariables($templateMgr, $contextId, $doi);
         $templateMgr->assign('metricsBadgesInBlock', false);
         $output .= $templateMgr->fetch($this->getTemplateResource('badges.tpl'));
 
-        return false;
+        return Hook::CONTINUE;
     }
 
     /**
@@ -278,10 +268,9 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin
                     $form->readInputData();
                     if ($form->validate()) {
                         $form->execute();
-                        $notificationManager = new \APP\notification\NotificationManager();
-                        $notificationManager->createTrivialNotification(
+                        (new NotificationManager())->createTrivialNotification(
                             $request->getUser()->getId(),
-                            $this->getSuccessNotificationType(),
+                            Notification::NOTIFICATION_TYPE_SUCCESS,
                             ['contents' => __('plugins.generic.articleMetricsBadges.settings.saved')]
                         );
                         return new JSONMessage(true);
@@ -295,16 +284,8 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin
 
         return parent::manage($args, $request);
     }
+}
 
-    /**
-     * The class holding the notification constants was renamed from
-     * PKPNotification to Notification in OJS 3.5; this keeps the plugin working
-     * on 3.4 and 3.5 from the same source.
-     */
-    protected function getSuccessNotificationType(): int
-    {
-        return class_exists('\PKP\notification\Notification')
-            ? \PKP\notification\Notification::NOTIFICATION_TYPE_SUCCESS
-            : \PKP\notification\PKPNotification::NOTIFICATION_TYPE_SUCCESS;
-    }
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\generic\articleMetricsBadges\ArticleMetricsBadgesPlugin', '\ArticleMetricsBadgesPlugin');
 }

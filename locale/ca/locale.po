@@ -1,0 +1,186 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ca\n"
+
+
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "Distintius de mètriques d'article"
+
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "Mostra els distintius de PlumX, Dimensions i Altmetric als articles que tenen DOI. Cada proveïdor es pot activar o desactivar per separat."
+
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "Distintius de mètriques d'article (barra lateral)"
+
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "Mostra els distintius de mètriques a la barra lateral de la pàgina de l'article."
+
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "Mètriques"
+
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "Trieu quins proveïdors de mètriques voleu mostrar i on han d'aparèixer. Els distintius només es dibuixen a les pàgines d'article i només quan l'article té DOI."
+
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "S'ha desat la configuració dels distintius de mètriques."
+
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "Els articles sense DOI no mostren mai distintius. Els proveïdors només mostren dades dels DOI que ja han indexat."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "Proveïdors de mètriques"
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "Trieu un o més proveïdors. Cada proveïdor seleccionat aquí carrega el seu propi script a la pàgina de l'article."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "Cada proveïdor fixa les seves condicions d'ús. Activeu només els proveïdors que la vostra revista està autoritzada a mostrar."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. Gratuït per a revistes d'accés obert no comercials i repositoris regionals, amb sol·licitud i aprovació."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. Gratuït per a investigadors individuals i institucions acadèmiques registrades; les editorials necessiten un acord per escrit."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. Gratuït per a pàgines personals i repositoris institucionals; l'ús en una revista requereix una llicència d'Altmetric."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "Cada proveïdor que activeu rep l'adreça IP del lector, el navegador i el DOI de l'article. Mencioneu-los a la declaració de privacitat de la revista."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "Trieu com a mínim un proveïdor de mètriques."
+
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "On mostrar-ho"
+
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "Podeu fer servir una posició o totes dues alhora."
+
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "A la pàgina de l'article"
+
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "Al bloc de la barra lateral"
+
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "Trieu com a mínim una posició."
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "Posició a la pàgina de l'article"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "Sota el resum"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "A la columna de detalls de l'article"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "A la part inferior de la pàgina"
+
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "Títol del bloc de la barra lateral (deixeu-ho en blanc per fer servir \\\"Mètriques\\\")"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "Opcions de PlumX"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "Tipus de giny"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "Resum"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "Detalls"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "Icona d'impressió amb finestra emergent"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "Orientació"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "Horitzontal"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "Vertical"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "Amplada (p. ex. 350px; deixeu-ho en blanc per al valor per defecte)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "Amaga el giny quan no hi hagi dades"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "Mostra una vora"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "Amaga la icona d'impressió"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Opcions de Dimensions"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "Estil del distintiu"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "Cercle petit"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "Rectangle petit"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "Rectangle gran"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "Barra"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "Amaga el distintiu quan no hi hagi citacions"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Opcions d'Altmetric"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Altmetric només fa seguiment de notícies, blogs, documents de política i xarxes socials. Les revistes els articles de les quals no s'esmenten en aquestes fonts mostraran un distintiu buit."
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "Tipus de distintiu"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "Anell"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "Anell mitjà"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "Barra"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "Finestra emergent de detalls"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "A la dreta"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "A l'esquerra"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "A dalt"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "A baix"

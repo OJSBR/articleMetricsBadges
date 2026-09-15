@@ -9,6 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_PT\n"
 
+
 msgid "plugins.generic.articleMetricsBadges.displayName"
 msgstr "Selos de Métricas do Artigo"
 
@@ -185,4 +186,3 @@ msgstr "Acima"
 
 msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
 msgstr "Abaixo"
-
