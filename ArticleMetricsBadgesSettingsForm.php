@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/articleMetricsBadges/ArticleMetricsBadgesSettingsForm.php
  *
- * Copyright (c) 2026 OJSBR - STNT Tecnologia da Informacao LTDA
- * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleMetricsBadgesSettingsForm
  *
@@ -15,17 +15,16 @@ namespace APP\plugins\generic\articleMetricsBadges;
 
 use APP\template\TemplateManager;
 use PKP\form\Form;
+use PKP\form\validation\FormValidator;
 use PKP\form\validation\FormValidatorCSRF;
+use PKP\form\validation\FormValidatorInSet;
 use PKP\form\validation\FormValidatorPost;
+use PKP\form\validation\FormValidatorRegExp;
 
 class ArticleMetricsBadgesSettingsForm extends Form
 {
-    public ?int $contextId;
-
-    public ArticleMetricsBadgesPlugin $plugin;
-
     /** Settings saved as booleans */
-    public static array $boolSettings = [
+    public const BOOL_SETTINGS = [
         'plumxEnabled', 'dimensionsEnabled', 'altmetricEnabled',
         'showInline', 'showBlock',
         'plumxHideWhenEmpty', 'plumxHidePrint', 'plumxBorder',
@@ -33,22 +32,59 @@ class ArticleMetricsBadgesSettingsForm extends Form
     ];
 
     /** Settings saved as strings */
-    public static array $stringSettings = [
+    public const STRING_SETTINGS = [
         'inlineHook', 'blockTitle',
         'plumxWidgetType', 'plumxOrientation', 'plumxWidth',
         'dimensionsStyle',
         'altmetricBadgeType', 'altmetricPopover',
     ];
 
-    public function __construct(ArticleMetricsBadgesPlugin $plugin, ?int $contextId)
-    {
-        $this->plugin = $plugin;
-        $this->contextId = $contextId;
+    /** The choices of each select, as value => locale key. */
+    public const OPTIONS = [
+        'inlineHook' => [
+            'main' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.main',
+            'details' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.details',
+            'footer' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.footer',
+        ],
+        'plumxWidgetType' => [
+            'plumx-summary' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary',
+            'plumx-details' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details',
+            'plumx-plum-print-popup' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup',
+        ],
+        'plumxOrientation' => [
+            'horizontal' => 'plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal',
+            'vertical' => 'plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical',
+        ],
+        'dimensionsStyle' => [
+            'small_circle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle',
+            'small_rectangle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle',
+            'large_rectangle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle',
+            'bar' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.bar',
+        ],
+        'altmetricBadgeType' => [
+            'donut' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut',
+            'medium-donut' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut',
+            'bar' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar',
+        ],
+        'altmetricPopover' => [
+            'right' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.right',
+            'left' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.left',
+            'top' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.top',
+            'bottom' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom',
+        ],
+    ];
 
+    public function __construct(public ArticleMetricsBadgesPlugin $plugin, public ?int $contextId)
+    {
         parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
         $this->addCheck(new FormValidatorPost($this));
         $this->addCheck(new FormValidatorCSRF($this));
+        foreach (self::OPTIONS as $field => $options) {
+            // Only the choices the form offers reach the page markup.
+            $this->addCheck(new FormValidatorInSet($this, $field, FormValidator::FORM_VALIDATOR_OPTIONAL_VALUE, 'validator.regex', array_keys($options)));
+        }
+        $this->addCheck(new FormValidatorRegExp($this, 'plumxWidth', FormValidator::FORM_VALIDATOR_OPTIONAL_VALUE, 'validator.regex', '/^\d{1,4}(px|%)?$/'));
     }
 
     /**
@@ -82,7 +118,7 @@ class ArticleMetricsBadgesSettingsForm extends Form
      */
     public function initData()
     {
-        foreach (array_merge(self::$boolSettings, self::$stringSettings) as $name) {
+        foreach (array_merge(self::BOOL_SETTINGS, self::STRING_SETTINGS) as $name) {
             $this->setData($name, $this->plugin->getSetting($this->contextId, $name));
         }
 
@@ -109,7 +145,7 @@ class ArticleMetricsBadgesSettingsForm extends Form
      */
     public function readInputData()
     {
-        $this->readUserVars(array_merge(self::$boolSettings, self::$stringSettings));
+        $this->readUserVars(array_merge(self::BOOL_SETTINGS, self::STRING_SETTINGS));
     }
 
     /**
@@ -120,37 +156,13 @@ class ArticleMetricsBadgesSettingsForm extends Form
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign([
             'pluginName' => $this->plugin->getName(),
-            'inlineHookOptions' => [
-                'main' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.main',
-                'details' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.details',
-                'footer' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.footer',
-            ],
-            'plumxWidgetTypeOptions' => [
-                'plumx-summary' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary',
-                'plumx-details' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details',
-                'plumx-plum-print-popup' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup',
-            ],
-            'plumxOrientationOptions' => [
-                'horizontal' => 'plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal',
-                'vertical' => 'plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical',
-            ],
-            'dimensionsStyleOptions' => [
-                'small_circle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle',
-                'small_rectangle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle',
-                'large_rectangle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle',
-                'bar' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.bar',
-            ],
-            'altmetricBadgeTypeOptions' => [
-                'donut' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut',
-                'medium-donut' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut',
-                'bar' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar',
-            ],
-            'altmetricPopoverOptions' => [
-                'right' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.right',
-                'left' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.left',
-                'top' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.top',
-                'bottom' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom',
-            ],
+            'settingsScriptUrl' => $request->getBaseUrl() . '/' . $this->plugin->getPluginPath() . '/js/settingsForm.js',
+            'inlineHookOptions' => self::OPTIONS['inlineHook'],
+            'plumxWidgetTypeOptions' => self::OPTIONS['plumxWidgetType'],
+            'plumxOrientationOptions' => self::OPTIONS['plumxOrientation'],
+            'dimensionsStyleOptions' => self::OPTIONS['dimensionsStyle'],
+            'altmetricBadgeTypeOptions' => self::OPTIONS['altmetricBadgeType'],
+            'altmetricPopoverOptions' => self::OPTIONS['altmetricPopover'],
         ]);
 
         return parent::fetch($request, $template, $display);
@@ -161,10 +173,10 @@ class ArticleMetricsBadgesSettingsForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        foreach (self::$boolSettings as $name) {
+        foreach (self::BOOL_SETTINGS as $name) {
             $this->plugin->updateSetting($this->contextId, $name, (bool) $this->getData($name), 'bool');
         }
-        foreach (self::$stringSettings as $name) {
+        foreach (self::STRING_SETTINGS as $name) {
             $this->plugin->updateSetting($this->contextId, $name, (string) $this->getData($name), 'string');
         }
 

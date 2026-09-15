@@ -1,8 +1,8 @@
 {**
  * plugins/generic/articleMetricsBadges/templates/block.tpl
  *
- * Copyright (c) 2026 OJSBR - STNT Tecnologia da Informacao LTDA
- * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Sidebar block wrapper for the metrics badges.
  *}

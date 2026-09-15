@@ -1,35 +1,22 @@
 {**
  * plugins/generic/articleMetricsBadges/templates/settingsForm.tpl
  *
- * Copyright (c) 2026 OJSBR - STNT Tecnologia da Informacao LTDA
- * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Article Metrics Badges plugin settings.
  *}
 <script>
 	$(function() {ldelim}
 		$('#articleMetricsBadgesSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
-
-		var toggleSection = function(checkboxId, sectionId) {ldelim}
-			var show = $('#' + checkboxId).is(':checked');
-			$('#' + sectionId)[show ? 'show' : 'hide']();
-		{rdelim};
-		var refresh = function() {ldelim}
-			toggleSection('plumxEnabled', 'articleMetricsBadgesPlumxOptions');
-			toggleSection('dimensionsEnabled', 'articleMetricsBadgesDimensionsOptions');
-			toggleSection('altmetricEnabled', 'articleMetricsBadgesAltmetricOptions');
-			toggleSection('showInline', 'articleMetricsBadgesInlineOptions');
-			toggleSection('showBlock', 'articleMetricsBadgesBlockOptions');
-		{rdelim};
-
-		$('#articleMetricsBadgesSettingsForm').on('change', 'input[type="checkbox"]', refresh);
-		refresh();
 	{rdelim});
 </script>
+<script src="{$settingsScriptUrl|escape}"></script>
 
-<form class="pkp_form" id="articleMetricsBadgesSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
+<form class="pkp_form" id="articleMetricsBadgesSettingsForm" method="post" action="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
 	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="articleMetricsBadgesSettingsFormNotification"}
+	{include file="common/formErrors.tpl"}
 
 	<div id="description">{translate key="plugins.generic.articleMetricsBadges.settings.description"}</div>
 
