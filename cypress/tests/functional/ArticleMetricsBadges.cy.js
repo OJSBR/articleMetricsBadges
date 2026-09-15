@@ -11,7 +11,8 @@
  * integration; the first test enables the plugin when it is off. The reader test
  * looks for a published article with a DOI through the API and is skipped when
  * there is none (the CI data set has no DOIs). The settings are put back as they
- * were after the run.
+ * were after the run; a journal that never saved them keeps those of the run, since
+ * the form refuses to save no provider.
  */
 
 describe('Article Metrics Badges plugin', function() {

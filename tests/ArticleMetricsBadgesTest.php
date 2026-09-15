@@ -148,15 +148,25 @@ class ArticleMetricsBadgesTest extends PKPTestCase
 
     public function testAtLeastOneProviderAndOnePositionAreRequired(): void
     {
-        $form = new ArticleMetricsBadgesSettingsForm($this->plugin([]), 1);
+        $form = $this->formWithoutRequestChecks();
         $form->setData('showInline', true);
         $form->validate(false);
         $this->assertArrayHasKey('plumxEnabled', $form->getErrorsArray());
 
-        $form = new ArticleMetricsBadgesSettingsForm($this->plugin([]), 1);
+        $form = $this->formWithoutRequestChecks();
         $form->setData('dimensionsEnabled', true);
         $form->validate(false);
         $this->assertArrayHasKey('showInline', $form->getErrorsArray());
+    }
+
+    /**
+     * The settings form without its POST and CSRF checks, which need a request and a session.
+     */
+    protected function formWithoutRequestChecks(): ArticleMetricsBadgesSettingsForm
+    {
+        $form = new ArticleMetricsBadgesSettingsForm($this->plugin([]), 1);
+        $form->_checks = array_values(array_filter($form->_checks, fn ($check) => !in_array((new \ReflectionClass($check))->getShortName(), ['FormValidatorPost', 'FormValidatorCSRF'], true)));
+        return $form;
     }
 
     public function testTheBadgesGoOnlyWhereTheManagerChose(): void
