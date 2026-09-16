@@ -126,7 +126,8 @@ Full detail, links and trademark notices: [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY
   in PKP's CI data set), that only the enabled provider's script and badge are on the page,
   with the article's DOI, in the chosen position. The settings are put back after the run.
   Each check fails with the part it covers removed.
-- Verified on OJS 3.5.0.3, 3.4.0.10 and 3.3.0.22.
+- Verified on OJS 3.5.0.3, 3.4.0.10 and 3.3.0.22. On 3.3 the reader check was skipped: that
+  installation has no published article with a DOI.
 
 Tests are kept in the repository and are not part of the release package.
 
@@ -250,7 +251,8 @@ posição, os templates e as traduções. O Cypress liga o plugin, confere que a
 uma posição que o formulário não oferece e, num artigo publicado com DOI achado pela API (pulado
 sem ele, como no data set do CI da PKP), que só o script e o selo do provedor ligado aparecem, com
 o DOI do artigo, na posição escolhida; a configuração volta ao que era no fim. Verificado no OJS
-3.5.0.3, 3.4.0.10 e 3.3.0.22.
+3.5.0.3, 3.4.0.10 e 3.3.0.22 — no 3.3 a conferência do leitor foi pulada, porque aquela instalação
+não tem artigo publicado com DOI.
 
 Os testes ficam no repositório e não fazem parte do pacote da release.
 
