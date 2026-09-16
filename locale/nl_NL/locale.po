@@ -1,0 +1,186 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: nl_NL\n"
+
+
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "Artikelmetrics-badges"
+
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "Toont PlumX-, Dimensions- en Altmetric-badges op artikelen met een DOI. Elke aanbieder kan afzonderlijk worden in- of uitgeschakeld."
+
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "Artikelmetrics-badges (zijbalk)"
+
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "Toont de metricsbadges in de zijbalk van de artikelpagina."
+
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "Metrics"
+
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "Kies welke metricsaanbieders worden getoond en waar. De badges verschijnen alleen op artikelpagina's en alleen als het artikel een DOI heeft."
+
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "De instellingen van de metricsbadges zijn opgeslagen."
+
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "Artikelen zonder DOI tonen nooit badges. Aanbieders tonen alleen gegevens voor DOI's die ze al hebben geïndexeerd."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "Metricsaanbieders"
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "Kies een of meer aanbieders. Elke hier gekozen aanbieder laadt een eigen script op de artikelpagina."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "Elke aanbieder stelt eigen gebruiksvoorwaarden. Schakel alleen de aanbieders in die uw tijdschrift mag tonen."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. Gratis voor niet-commerciële open access-tijdschriften en regionale repositories, op aanvraag en na goedkeuring."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. Gratis voor individuele onderzoekers en geregistreerde academische instellingen; uitgevers hebben een schriftelijke overeenkomst nodig."
+
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. Gratis voor persoonlijke pagina's en institutionele repositories; gebruik op een tijdschrift vereist een licentie van Altmetric."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "Elke aanbieder die u inschakelt, ontvangt het IP-adres van de lezer, de browser en de DOI van het artikel. Vermeld ze in de privacyverklaring van het tijdschrift."
+
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "Kies minstens één metricsaanbieder."
+
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "Waar weergeven"
+
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "U kunt één positie gebruiken of beide tegelijk."
+
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "Op de artikelpagina"
+
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "In het zijbalkblok"
+
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "Kies minstens één positie."
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "Positie op de artikelpagina"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "Onder de samenvatting"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "In de kolom met artikeldetails"
+
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "Onderaan de pagina"
+
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "Titel van het zijbalkblok (laat leeg om \\\"Metrics\\\" te gebruiken)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "PlumX-opties"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "Widgettype"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "Samenvatting"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "Details"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "Printpictogram met pop-up"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "Oriëntatie"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "Horizontaal"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "Verticaal"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "Breedte (bijv. 350px; laat leeg voor de standaardwaarde)"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "Verberg de widget als er geen gegevens zijn"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "Toon een rand"
+
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "Verberg het printpictogram"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Dimensions-opties"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "Badgestijl"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "Kleine cirkel"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "Kleine rechthoek"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "Grote rechthoek"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "Balk"
+
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "Verberg de badge als er geen citaties zijn"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Altmetric-opties"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Altmetric volgt alleen nieuws, blogs, beleidsdocumenten en sociale media. Tijdschriften waarvan de artikelen niet in die bronnen worden genoemd, tonen een lege badge."
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "Badgetype"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "Ring"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "Middelgrote ring"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "Balk"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "Detailvenster"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "Rechts"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "Links"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "Boven"
+
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "Onder"

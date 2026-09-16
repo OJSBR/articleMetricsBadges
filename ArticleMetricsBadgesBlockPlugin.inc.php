@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/articleMetricsBadges/ArticleMetricsBadgesBlockPlugin.inc.php
  *
- * Copyright (c) 2026 OJSBR - STNT Tecnologia da Informacao LTDA
- * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleMetricsBadgesBlockPlugin
  * @ingroup plugins_generic_articleMetricsBadges
@@ -16,21 +16,23 @@ import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ArticleMetricsBadgesBlockPlugin extends BlockPlugin {
 
-	/** @var string Name of the generic plugin that registers this block */
-	var $parentPluginName;
-
-	/** @var string Path of the generic plugin that registers this block */
-	var $pluginPath;
+	/** @var ArticleMetricsBadgesPlugin The generic plugin that registers this block */
+	protected $_parentPlugin;
 
 	/**
 	 * Constructor
-	 * @param $parentPluginName string
-	 * @param $pluginPath string
+	 * @param $parentPlugin ArticleMetricsBadgesPlugin
 	 */
-	function __construct($parentPluginName, $pluginPath) {
+	function __construct($parentPlugin) {
 		parent::__construct();
-		$this->parentPluginName = $parentPluginName;
-		$this->pluginPath = $pluginPath;
+		$this->_parentPlugin = $parentPlugin;
+	}
+
+	/**
+	 * @copydoc Plugin::getName()
+	 */
+	function getName() {
+		return 'ArticleMetricsBadgesBlockPlugin';
 	}
 
 	/**
@@ -48,9 +50,7 @@ class ArticleMetricsBadgesBlockPlugin extends BlockPlugin {
 	 * @copydoc LazyLoadPlugin::getEnabled()
 	 */
 	function getEnabled($contextId = null) {
-		if (!Config::getVar('general', 'installed')) return true;
-		$plugin = $this->getParentPlugin();
-		return $plugin ? $plugin->getEnabled($contextId) : false;
+		return $this->_parentPlugin->getEnabled($contextId);
 	}
 
 	/**
@@ -76,51 +76,38 @@ class ArticleMetricsBadgesBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the generic plugin that owns the settings.
-	 * @return ArticleMetricsBadgesPlugin|null
-	 */
-	function getParentPlugin() {
-		return PluginRegistry::getPlugin('generic', $this->parentPluginName);
-	}
-
-	/**
 	 * @copydoc Plugin::getPluginPath()
 	 */
 	function getPluginPath() {
-		return $this->pluginPath;
+		return $this->_parentPlugin->getPluginPath();
 	}
 
 	/**
-	 * @copydoc BlockPlugin::getBlockTemplateFilename()
+	 * @copydoc Plugin::getTemplatePath()
 	 */
-	function getBlockTemplateFilename() {
-		return 'block.tpl';
+	function getTemplatePath($inCore = false) {
+		return $this->_parentPlugin->getTemplatePath($inCore);
 	}
 
 	/**
 	 * @copydoc BlockPlugin::getContents()
 	 */
 	function getContents($templateMgr, $request = null) {
-		$plugin = $this->getParentPlugin();
-		if (!$plugin) return '';
-
 		if (is_null($request)) $request = Application::get()->getRequest();
 		$context = $request->getContext();
-		if (!$context) return '';
+		if (!$context || !$this->_parentPlugin->getSetting($context->getId(), 'showBlock')) return '';
 
 		$contextId = $context->getId();
-		if (!$plugin->getSetting($contextId, 'showBlock')) return '';
-
-		$doi = $plugin->getArticleDoi($templateMgr, $contextId);
+		$doi = $this->_parentPlugin->getArticleDoi($templateMgr, $contextId);
 		if (!$doi) return '';
 
-		$blockTitle = $plugin->getSetting($contextId, 'blockTitle');
+		$blockTitle = $this->_parentPlugin->getSetting($contextId, 'blockTitle');
 		$templateMgr->assign(array(
 			'metricsBadgesBlockTitle' => $blockTitle ? $blockTitle : __('plugins.generic.articleMetricsBadges.block.defaultTitle'),
 			'metricsBadgesInBlock' => true,
 		));
-		$plugin->assignBadgeVariables($templateMgr, $contextId, $doi);
+		$this->_parentPlugin->assignBadgeVariables($templateMgr, $contextId, $doi);
 
-		return $templateMgr->fetch($this->getTemplateResource($this->getBlockTemplateFilename()));
+		return $templateMgr->fetch($this->_parentPlugin->getTemplateResource('block.tpl'));
 	}
 }

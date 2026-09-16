@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ro_RO\n"
+
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "Insigne cu metrici ale articolului"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "Afișează insignele PlumX, Dimensions și Altmetric la articolele care au DOI. Fiecare furnizor poate fi activat sau dezactivat separat."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "Insigne cu metrici ale articolului (bară laterală)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "Afișează insignele cu metrici în bara laterală a paginii articolului."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "Metrici"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "Alegeți ce furnizori de metrici să fie afișați și unde. Insignele apar doar pe paginile articolelor și doar când articolul are DOI."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "Setările insignelor cu metrici au fost salvate."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "Articolele fără DOI nu afișează niciodată insigne. Furnizorii arată date doar pentru DOI-urile pe care le-au indexat deja."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "Furnizori de metrici"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "Alegeți unul sau mai mulți furnizori. Fiecare furnizor selectat aici încarcă propriul script pe pagina articolului."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "Fiecare furnizor își stabilește propriile condiții de utilizare. Activați doar furnizorii pe care revista dvs. are dreptul să îi afișeze."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. Gratuit pentru revistele cu acces deschis necomerciale și depozitele regionale, la cerere și după aprobare."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. Gratuit pentru cercetătorii individuali și instituțiile academice înregistrate; editurile au nevoie de un acord scris."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. Gratuit pentru pagini personale și depozite instituționale; utilizarea într-o revistă necesită o licență de la Altmetric."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "Fiecare furnizor activat primește adresa IP a cititorului, browserul și DOI-ul articolului. Menționați-i în declarația de confidențialitate a revistei."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "Alegeți cel puțin un furnizor de metrici."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "Unde să se afișeze"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "Puteți folosi o singură poziție sau ambele în același timp."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "Pe pagina articolului"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "În blocul barei laterale"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "Alegeți cel puțin o poziție."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "Poziția pe pagina articolului"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "Sub rezumat"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "În coloana cu detaliile articolului"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "În partea de jos a paginii"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "Titlul blocului din bara laterală (lăsați gol pentru a folosi „Metrici”)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "Opțiuni PlumX"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "Tipul widgetului"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "Rezumat"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "Detalii"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "Pictogramă de tipărire cu fereastră pop-up"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "Orientare"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "Orizontal"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "Vertical"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "Lățime (de ex. 350px; lăsați gol pentru valoarea implicită)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "Ascunde widgetul când nu există date"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "Afișează un chenar"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "Ascunde pictograma de tipărire"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Opțiuni Dimensions"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "Stilul insignei"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "Cerc mic"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "Dreptunghi mic"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "Dreptunghi mare"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "Bară"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "Ascunde insigna când nu există citări"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Opțiuni Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Altmetric urmărește doar știri, bloguri, documente de politici și rețele sociale. Revistele ale căror articole nu sunt menționate în aceste surse vor afișa o insignă goală."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "Tipul insignei"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "Inel"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "Inel mediu"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "Bară"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "Fereastră cu detalii"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "În dreapta"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "În stânga"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "Deasupra"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "Dedesubt"

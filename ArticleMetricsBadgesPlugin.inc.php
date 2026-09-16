@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/articleMetricsBadges/ArticleMetricsBadgesPlugin.inc.php
  *
- * Copyright (c) 2026 OJSBR - STNT Tecnologia da Informacao LTDA
- * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleMetricsBadgesPlugin
  * @ingroup plugins_generic_articleMetricsBadges
@@ -16,25 +16,27 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ArticleMetricsBadgesPlugin extends GenericPlugin {
 
-	/** Appended to the stylesheet URL so that a released change reaches browsers that cached the old file. */
-	const STYLE_VERSION = '1.1.0';
-
 	/**
 	 * The providers supported by this plugin. The key is used both as the
 	 * settings prefix (e.g. plumxEnabled) and as the template variable prefix.
-	 * @var array
 	 */
-	public static $providers = array('plumx', 'dimensions', 'altmetric');
+	const PROVIDERS = array('plumx', 'dimensions', 'altmetric');
 
 	/**
 	 * Template hooks available for the inline badges, keyed by the value
 	 * stored in the inlineHook setting.
-	 * @var array
 	 */
-	public static $inlineHooks = array(
+	const INLINE_HOOKS = array(
 		'main' => 'Templates::Article::Main',
 		'details' => 'Templates::Article::Details',
 		'footer' => 'Templates::Article::Footer::PageFooter',
+	);
+
+	/** The script of each provider, loaded by the reader's browser from the provider. */
+	const PROVIDER_SCRIPTS = array(
+		'plumx' => 'https://cdn.plu.mx/widget-all.js',
+		'dimensions' => 'https://badge.dimensions.ai/badge.js',
+		'altmetric' => 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js',
 	);
 
 	/**
@@ -49,14 +51,14 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin {
 			// depend on the active theme calling the page footer hook.
 			HookRegistry::register('TemplateManager::display', array($this, 'loadProviderScripts'));
 
-			foreach (self::$inlineHooks as $hookName) {
+			foreach (self::INLINE_HOOKS as $hookName) {
 				HookRegistry::register($hookName, array($this, 'insertInlineBadges'));
 			}
 
 			$this->import('ArticleMetricsBadgesBlockPlugin');
 			PluginRegistry::register(
 				'blocks',
-				new ArticleMetricsBadgesBlockPlugin($this->getName(), $this->getPluginPath()),
+				new ArticleMetricsBadgesBlockPlugin($this),
 				$this->getPluginPath()
 			);
 		}
@@ -85,7 +87,7 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin {
 	 */
 	function getEnabledProviders($contextId) {
 		$enabled = array();
-		foreach (self::$providers as $provider) {
+		foreach (self::PROVIDERS as $provider) {
 			if ($this->getSetting($contextId, $provider . 'Enabled')) {
 				$enabled[] = $provider;
 			}
@@ -105,18 +107,29 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin {
 	 * @return string|null
 	 */
 	function getArticleDoi($templateMgr, $contextId) {
+		if (!$this->isArticlePage() || !$this->getEnabledProviders($contextId)) return null;
+
+		// The version of the article being displayed, which may be an older one.
+		$publication = $templateMgr->getTemplateVars('publication');
+		if (!$publication) {
+			$submission = $templateMgr->getTemplateVars('article');
+			$publication = $submission ? $submission->getCurrentPublication() : null;
+		}
+		if (!$publication) return null;
+
+		$doi = $publication->getStoredPubId('doi');
+		return $doi ? $doi : null;
+	}
+
+	/**
+	 * Whether the request is for the article page. getRequestedPage() only exists on the
+	 * page router: every backend AJAX request runs through the component router.
+	 * @return boolean
+	 */
+	function isArticlePage() {
 		$request = Application::get()->getRequest();
 		$router = $request->getRouter();
-		// getRequestedPage() only exists on the page router: every backend AJAX
-		// request runs through the component router and must be ignored here.
-		if (!($router instanceof PKPPageRouter) || $router->getRequestedPage($request) != 'article') return null;
-		if (!$this->getEnabledProviders($contextId)) return null;
-
-		$submission = $templateMgr->getTemplateVars('article');
-		if (!$submission) return null;
-
-		$doi = $submission->getStoredPubId('doi');
-		return $doi ? $doi : null;
+		return $router instanceof PKPPageRouter && $router->getRequestedPage($request) === 'article';
 	}
 
 	/**
@@ -133,23 +146,17 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin {
 
 		if (!$this->getArticleDoi($templateMgr, $context->getId())) return false;
 
-		$scripts = array(
-			'plumx' => 'https://cdn.plu.mx/widget-all.js',
-			'dimensions' => 'https://badge.dimensions.ai/badge.js',
-			'altmetric' => 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js',
-		);
-
 		foreach ($this->getEnabledProviders($context->getId()) as $provider) {
 			$templateMgr->addJavaScript(
 				'articleMetricsBadges-' . $provider,
-				$scripts[$provider],
+				self::PROVIDER_SCRIPTS[$provider],
 				array('contexts' => 'frontend')
 			);
 		}
 
 		$templateMgr->addStyleSheet(
 			'articleMetricsBadges',
-			$request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/badges.css?v=' . self::STYLE_VERSION,
+			$request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/badges.css',
 			array('contexts' => 'frontend')
 		);
 
@@ -172,7 +179,7 @@ class ArticleMetricsBadgesPlugin extends GenericPlugin {
 		if (!$this->getSetting($contextId, 'showInline')) return false;
 
 		$chosenHook = $this->getSetting($contextId, 'inlineHook');
-		if (!isset(self::$inlineHooks[$chosenHook]) || self::$inlineHooks[$chosenHook] != $hookName) return false;
+		if (!isset(self::INLINE_HOOKS[$chosenHook]) || self::INLINE_HOOKS[$chosenHook] !== $hookName) return false;
 
 		$templateMgr = TemplateManager::getManager($request);
 		$doi = $this->getArticleDoi($templateMgr, $contextId);

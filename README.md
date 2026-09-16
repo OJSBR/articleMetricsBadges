@@ -1,26 +1,28 @@
 # Article Metrics Badges — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.3%20%7C%203.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.1.0.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.1.1.0-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.0.0/articleMetricsBadges-1.1.0.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.0.0-ojs3.4/articleMetricsBadges-1.1.0.0-ojs3.4.tar.gz) · [OJS 3.3](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.0.0-ojs3.3/articleMetricsBadges-1.1.0.0-ojs3.3.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.1.0/articleMetricsBadges-1.1.1.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.1.0-ojs3.4/articleMetricsBadges-1.1.1.0-ojs3.4.tar.gz) · [OJS 3.3](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.1.0-ojs3.3/articleMetricsBadges-1.1.1.0-ojs3.3.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that displays article-level metric badges
 from **PlumX**, **Dimensions** and **Altmetric**. Each provider is switched on independently,
 and so is each display position — inside the article page, in the sidebar block, or both at
 the same time.
 
-> **Developed and maintained by [OJSBR](https://ojsbr.com).** See the
-> [Credits & authorship](#credits--authorship) section below.
+> **Developed and maintained by [OJSBR](https://ojsbr.com).** Honourable mention to the
+> **University Library System, University of Pittsburgh**, whose
+> [Plum Analytics Artifact Widget](https://github.com/ulsdevteam/ojs-plum-plugin) plugin showed
+> the way. See the [Credits & authorship](#credits--authorship) section below.
 
 ## Compatibility & branches
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.1.0.0 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.1.0.0-ojs3.4 |
-| OJS 3.3.x   | [`stable-3_3_0`](../../tree/stable-3_3_0) | 1.1.0.0-ojs3.3 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.1.1.0 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.1.1.0-ojs3.4 |
+| OJS 3.3.x   | [`stable-3_3_0`](../../tree/stable-3_3_0) | 1.1.1.0-ojs3.3 |
 
 > **Do not rename the folder.** OJS 3.4/3.5 derive the plugin's class namespace from the
 > installation directory, so the folder must stay `articleMetricsBadges`.
@@ -93,17 +95,41 @@ Full detail, links and trademark notices: [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY
   chosen position, wrapped in `section.item` for theme alignment.
 - **Sidebar block** — a `BlockPlugin` registered at runtime by the generic plugin, sharing its
   settings; it renders nothing unless the sidebar position is enabled.
-- **DOI** — read from the submission in the template context via `getStoredPubId('doi')`; the
-  page router is checked with `instanceof` first, so backend AJAX requests are ignored.
+- **DOI** — read from the version of the article being displayed (the `publication` template
+  variable, so an older version shows its own DOI); the page router is checked with
+  `instanceof` first, so backend AJAX requests are ignored.
+- **Settings** — PKP's `Form` with `FormValidatorPost`, `FormValidatorCSRF`, and checks that
+  every select holds one of the choices it offers and the PlumX width is a size, so nothing
+  else reaches the page markup.
 - Nothing is cached or proxied: the badge markup carries the DOI and the provider's script
   does the rest.
 
 ## Tests
 
-Verified on live journals across the three supported lines: OJS 3.3.0.21 (two journals),
-OJS 3.4.0.9 and OJS 3.5.0.5 — plugin enabled, badges rendered on article pages with a DOI,
-absent on articles without one, alignment checked against the theme's own `section.item`
-elements, and the settings form saved and reopened. An automated suite is not shipped yet.
+- **PHPUnit** (`tests/*Test.php`, on PKP's `PKPTestCase`): the classes against the installed
+  PKP, the plugin found by PKP's plugin registry, only enabled providers used, the DOI of the
+  displayed version (and no badge outside the article page, without a provider or without a
+  DOI), the provider scripts, the sidebar block following the plugin, the form accepting only
+  the choices it offers and requiring a provider and a position, the templates and the
+  translations. From the OJS root:
+
+  ```bash
+  lib/pkp/lib/vendor/bin/phpunit --configuration lib/pkp/tests/phpunit.xml --no-coverage "$PWD/plugins/generic/articleMetricsBadges/tests"
+  ```
+
+  (On OJS 3.3 the PHPUnit configuration is `lib/pkp/tests/phpunit-env1.xml`.)
+
+- **Cypress** (`cypress/tests/functional/ArticleMetricsBadges.cy.js`, run by
+  [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on every push to the 3.5 and
+  3.4 branches): enables the plugin, checks the settings refuse a position the form does not
+  offer and, on a published article with a DOI found through the API (skipped without one, as
+  in PKP's CI data set), that only the enabled provider's script and badge are on the page,
+  with the article's DOI, in the chosen position. The settings are put back after the run.
+  Each check fails with the part it covers removed.
+- Verified on OJS 3.5.0.3, 3.4.0.10 and 3.3.0.22. On 3.3 the reader check was skipped: that
+  installation has no published article with a DOI.
+
+Tests are kept in the repository and are not part of the release package.
 
 ## Credits & authorship
 
@@ -116,6 +142,12 @@ elements, and the settings form saved and reopened. An automated suite is not sh
 - PlumX, Dimensions and Altmetric are third-party services of their respective owners; see
   [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
 - Distributed under the **GNU GPL v3**.
+
+## AI use
+
+Generative AI (Claude, by Anthropic) was used to write and run tests, improve the code and bring
+it in line with PKP standards. Every change is reviewed and tested by OJSBR, which is responsible
+for the published releases.
 
 ## Contributing
 
@@ -135,16 +167,18 @@ do **PlumX**, do **Dimensions** e do **Altmetric**. Cada provedor é ligado de f
 independente, e cada posição também — dentro da página do artigo, no bloco da barra lateral,
 ou nos dois ao mesmo tempo.
 
-> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).** Veja a seção
-> [Créditos e autoria](#créditos-e-autoria) abaixo.
+> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).** Menção honrosa ao **University
+> Library System da University of Pittsburgh**, cujo plugin
+> [Plum Analytics Artifact Widget](https://github.com/ulsdevteam/ojs-plum-plugin) mostrou o
+> caminho. Veja a seção [Créditos e autoria](#créditos-e-autoria) abaixo.
 
 ### Compatibilidade e branches
 
 | Versão do OJS | Branch | Release do plugin |
 |---------------|--------|-------------------|
-| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 1.1.0.0 |
-| OJS 3.4.x     | `stable-3_4_0` | 1.1.0.0-ojs3.4 |
-| OJS 3.3.x     | `stable-3_3_0` | 1.1.0.0-ojs3.3 |
+| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 1.1.1.0 |
+| OJS 3.4.x     | `stable-3_4_0` | 1.1.1.0-ojs3.4 |
+| OJS 3.3.x     | `stable-3_3_0` | 1.1.1.0-ojs3.3 |
 
 > **Não renomeie a pasta.** O OJS 3.4/3.5 deriva o namespace da classe do diretório de
 > instalação, então a pasta precisa continuar `articleMetricsBadges`.
@@ -206,10 +240,21 @@ Detalhe completo, links e marcas: [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES
 
 ### Testes
 
-Verificado em revistas reais nas três linhas suportadas: OJS 3.3.0.21 (duas revistas),
-OJS 3.4.0.9 e OJS 3.5.0.5 — plugin habilitado, selos renderizados em artigos com DOI, ausentes
-em artigos sem DOI, alinhamento conferido contra os próprios `section.item` do tema, e
-formulário de configuração salvo e reaberto. Ainda não há suíte automatizada.
+PHPUnit em `tests/` (sobre o `PKPTestCase` do PKP; no OJS 3.3 com `lib/pkp/tests/phpunit-env1.xml`)
+e Cypress em `cypress/tests/functional/` (rodado pelo
+[pkp-github-actions](https://github.com/pkp/pkp-github-actions) a cada push nas branches 3.5 e
+3.4), com os comandos da seção em inglês. A suíte cobre as classes contra o PKP instalado, o
+plugin encontrado pelo registro de plugins, só os provedores ligados, o DOI da versão exibida (e
+nenhum selo fora da página do artigo, sem provedor ou sem DOI), os scripts dos provedores, o bloco
+seguindo o plugin, o formulário aceitando só as opções que oferece e exigindo um provedor e uma
+posição, os templates e as traduções. O Cypress liga o plugin, confere que a configuração recusa
+uma posição que o formulário não oferece e, num artigo publicado com DOI achado pela API (pulado
+sem ele, como no data set do CI da PKP), que só o script e o selo do provedor ligado aparecem, com
+o DOI do artigo, na posição escolhida; a configuração volta ao que era no fim. Verificado no OJS
+3.5.0.3, 3.4.0.10 e 3.3.0.22 — no 3.3 a conferência do leitor foi pulada, porque aquela instalação
+não tem artigo publicado com DOI.
+
+Os testes ficam no repositório e não fazem parte do pacote da release.
 
 ### Créditos e autoria
 
@@ -222,6 +267,12 @@ formulário de configuração salvo e reaberto. Ainda não há suíte automatiza
 - PlumX, Dimensions e Altmetric são serviços de terceiros de seus respectivos titulares; veja
   [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
 - Distribuído sob a **GNU GPL v3**.
+
+### Uso de IA
+
+Foi usada IA generativa (Claude, da Anthropic) para escrever e rodar testes, melhorar o código e
+alinhá-lo aos padrões da PKP. Toda mudança é revisada e testada pela OJSBR, que responde pelas
+releases publicadas.
 
 ### Licença
 

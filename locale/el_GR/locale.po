@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: el_GR\n"
+
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "Σήματα μετρικών άρθρου"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "Εμφανίζει σήματα PlumX, Dimensions και Altmetric σε άρθρα με DOI. Κάθε πάροχος ενεργοποιείται ή απενεργοποιείται ξεχωριστά."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "Σήματα μετρικών άρθρου (πλαϊνή στήλη)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "Εμφανίζει τα σήματα μετρικών στην πλαϊνή στήλη της σελίδας του άρθρου."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "Μετρικές"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "Επιλέξτε ποιοι πάροχοι μετρικών θα εμφανίζονται και πού. Τα σήματα εμφανίζονται μόνο σε σελίδες άρθρων και μόνο όταν το άρθρο έχει DOI."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "Οι ρυθμίσεις των σημάτων μετρικών αποθηκεύτηκαν."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "Τα άρθρα χωρίς DOI δεν εμφανίζουν ποτέ σήματα. Οι πάροχοι δείχνουν δεδομένα μόνο για DOI που έχουν ήδη ευρετηριάσει."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "Πάροχοι μετρικών"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "Επιλέξτε έναν ή περισσότερους παρόχους. Κάθε πάροχος που επιλέγετε εδώ φορτώνει το δικό του σενάριο στη σελίδα του άρθρου."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "Κάθε πάροχος ορίζει τους δικούς του όρους χρήσης. Ενεργοποιήστε μόνο τους παρόχους που το περιοδικό σας έχει δικαίωμα να εμφανίζει."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. Δωρεάν για μη εμπορικά περιοδικά ανοικτής πρόσβασης και περιφερειακά αποθετήρια, κατόπιν αιτήματος και έγκρισης."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. Δωρεάν για μεμονωμένους ερευνητές και εγγεγραμμένα ακαδημαϊκά ιδρύματα· οι εκδότες χρειάζονται γραπτή συμφωνία."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. Δωρεάν για προσωπικές σελίδες και ιδρυματικά αποθετήρια· η χρήση σε περιοδικό απαιτεί άδεια από την Altmetric."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "Κάθε πάροχος που ενεργοποιείτε λαμβάνει τη διεύθυνση IP του αναγνώστη, το πρόγραμμα περιήγησης και το DOI του άρθρου. Αναφέρετέ τους στη δήλωση απορρήτου του περιοδικού."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "Επιλέξτε τουλάχιστον έναν πάροχο μετρικών."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "Πού να εμφανίζεται"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "Μπορείτε να χρησιμοποιήσετε μία θέση ή και τις δύο ταυτόχρονα."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "Στη σελίδα του άρθρου"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "Στο μπλοκ της πλαϊνής στήλης"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "Επιλέξτε τουλάχιστον μία θέση."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "Θέση στη σελίδα του άρθρου"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "Κάτω από την περίληψη"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "Στη στήλη λεπτομερειών του άρθρου"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "Στο κάτω μέρος της σελίδας"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "Τίτλος μπλοκ πλαϊνής στήλης (αφήστε κενό για χρήση του \\\"Μετρικές\\\")"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "Επιλογές PlumX"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "Τύπος widget"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "Σύνοψη"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "Λεπτομέρειες"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "Εικονίδιο εκτύπωσης με αναδυόμενο παράθυρο"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "Προσανατολισμός"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "Οριζόντια"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "Κατακόρυφα"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "Πλάτος (π.χ. 350px· αφήστε κενό για την προεπιλογή)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "Απόκρυψη του widget όταν δεν υπάρχουν δεδομένα"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "Εμφάνιση περιγράμματος"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "Απόκρυψη του εικονιδίου εκτύπωσης"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "Επιλογές Dimensions"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "Στυλ σήματος"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "Μικρός κύκλος"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "Μικρό ορθογώνιο"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "Μεγάλο ορθογώνιο"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "Ράβδος"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "Απόκρυψη του σήματος όταν δεν υπάρχουν αναφορές"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "Επιλογές Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Το Altmetric παρακολουθεί μόνο ειδήσεις, ιστολόγια, έγγραφα πολιτικής και μέσα κοινωνικής δικτύωσης. Περιοδικά των οποίων τα άρθρα δεν αναφέρονται σε αυτές τις πηγές θα εμφανίζουν κενό σήμα."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "Τύπος σήματος"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "Δακτύλιος"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "Μεσαίος δακτύλιος"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "Ράβδος"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "Αναδυόμενο παράθυρο λεπτομερειών"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "Δεξιά"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "Αριστερά"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "Επάνω"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "Κάτω"

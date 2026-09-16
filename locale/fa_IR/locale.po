@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: fa_IR\n"
+
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.displayName"
+msgstr "نشان‌های سنجه‌های مقاله"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.description"
+msgstr "نشان‌های PlumX، Dimensions و Altmetric را در مقاله‌های دارای DOI نمایش می‌دهد. هر ارائه‌دهنده را می‌توان جداگانه روشن یا خاموش کرد."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.displayName"
+msgstr "نشان‌های سنجه‌های مقاله (نوار کناری)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.description"
+msgstr "نشان‌های سنجه را در نوار کناری صفحهٔ مقاله نشان می‌دهد."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.block.defaultTitle"
+msgstr "سنجه‌ها"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.description"
+msgstr "انتخاب کنید کدام ارائه‌دهندگان سنجه و در کجا نمایش داده شوند. نشان‌ها فقط در صفحه‌های مقاله و فقط وقتی مقاله DOI دارد رسم می‌شوند."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.saved"
+msgstr "تنظیمات نشان‌های سنجه ذخیره شد."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.doiNotice"
+msgstr "مقاله‌های بدون DOI هرگز نشان نمایش نمی‌دهند. ارائه‌دهندگان تنها برای DOIهایی که پیش‌تر نمایه کرده‌اند داده نشان می‌دهند."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers"
+msgstr "ارائه‌دهندگان سنجه"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.description"
+msgstr "یک یا چند ارائه‌دهنده انتخاب کنید. هر ارائه‌دهنده‌ای که اینجا انتخاب شود اسکریپت خودش را در صفحهٔ مقاله بارگذاری می‌کند."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx"
+msgstr "PlumX (Elsevier)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions"
+msgstr "Dimensions (Digital Science)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric"
+msgstr "Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.licensing"
+msgstr "هر ارائه‌دهنده شرایط استفادهٔ خود را دارد. تنها ارائه‌دهندگانی را فعال کنید که نشریهٔ شما مجاز به نمایششان است."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.plumx.terms"
+msgstr "Elsevier. برای نشریات دسترسی آزاد غیرتجاری و مخازن منطقه‌ای، با درخواست و تأیید، رایگان است."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.dimensions.terms"
+msgstr "Digital Science. برای پژوهشگران منفرد و مؤسسات دانشگاهی ثبت‌شده رایگان است؛ ناشران به توافق کتبی نیاز دارند."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.provider.altmetric.terms"
+msgstr "Altmetric. برای صفحه‌های شخصی و مخازن سازمانی رایگان است؛ استفاده در یک نشریه نیازمند پروانه از Altmetric است."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providers.privacy"
+msgstr "هر ارائه‌دهنده‌ای که فعال کنید نشانی IP خواننده، مرورگر و DOI مقاله را دریافت می‌کند. آن‌ها را در بیانیهٔ حریم خصوصی نشریه ذکر کنید."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.providerRequired"
+msgstr "دست‌کم یک ارائه‌دهندهٔ سنجه انتخاب کنید."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions"
+msgstr "کجا نمایش داده شود"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positions.description"
+msgstr "می‌توانید یک موقعیت یا هر دو را هم‌زمان به کار ببرید."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showInline"
+msgstr "در صفحهٔ مقاله"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.showBlock"
+msgstr "در بلوک نوار کناری"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.positionRequired"
+msgstr "دست‌کم یک موقعیت انتخاب کنید."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook"
+msgstr "موقعیت در صفحهٔ مقاله"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.main"
+msgstr "زیر چکیده"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.details"
+msgstr "در ستون جزئیات مقاله"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.inlineHook.footer"
+msgstr "در پایین صفحه"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.blockTitle"
+msgstr "عنوان بلوک نوار کناری (برای استفاده از \\\"سنجه‌ها\\\" خالی بگذارید)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx"
+msgstr "گزینه‌های PlumX"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType"
+msgstr "نوع ابزارک"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary"
+msgstr "خلاصه"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details"
+msgstr "جزئیات"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup"
+msgstr "نماد چاپ با پنجرهٔ بازشو"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation"
+msgstr "جهت"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal"
+msgstr "افقی"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical"
+msgstr "عمودی"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.width"
+msgstr "عرض (مثلاً 350px؛ برای مقدار پیش‌فرض خالی بگذارید)"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hideWhenEmpty"
+msgstr "پنهان کردن ابزارک وقتی داده‌ای نیست"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.border"
+msgstr "نمایش کادر"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.plumx.hidePrint"
+msgstr "پنهان کردن نماد چاپ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions"
+msgstr "گزینه‌های Dimensions"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style"
+msgstr "سبک نشان"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle"
+msgstr "دایرهٔ کوچک"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle"
+msgstr "مستطیل کوچک"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle"
+msgstr "مستطیل بزرگ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.style.bar"
+msgstr "نوار"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.dimensions.hideZero"
+msgstr "پنهان کردن نشان وقتی استنادی نیست"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric"
+msgstr "گزینه‌های Altmetric"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.coverageWarning"
+msgstr "Altmetric فقط خبرها، وبلاگ‌ها، اسناد سیاست‌گذاری و شبکه‌های اجتماعی را رصد می‌کند. نشریاتی که مقاله‌هایشان در این منابع ذکر نشود نشان خالی نمایش می‌دهند."
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType"
+msgstr "نوع نشان"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut"
+msgstr "حلقه"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut"
+msgstr "حلقهٔ متوسط"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar"
+msgstr "نوار"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover"
+msgstr "پنجرک جزئیات"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.right"
+msgstr "سمت راست"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.left"
+msgstr "سمت چپ"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.top"
+msgstr "بالا"
+
+#, fuzzy
+msgid "plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom"
+msgstr "پایین"

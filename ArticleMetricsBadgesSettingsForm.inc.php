@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/articleMetricsBadges/ArticleMetricsBadgesSettingsForm.inc.php
  *
- * Copyright (c) 2026 OJSBR - STNT Tecnologia da Informacao LTDA
- * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleMetricsBadgesSettingsForm
  * @ingroup plugins_generic_articleMetricsBadges
@@ -13,6 +13,8 @@
  */
 
 import('lib.pkp.classes.form.Form');
+import('lib.pkp.classes.form.validation.FormValidatorInSet');
+import('lib.pkp.classes.form.validation.FormValidatorRegExp');
 
 class ArticleMetricsBadgesSettingsForm extends Form {
 
@@ -22,20 +24,55 @@ class ArticleMetricsBadgesSettingsForm extends Form {
 	/** @var ArticleMetricsBadgesPlugin */
 	var $_plugin;
 
-	/** @var array Settings saved as booleans */
-	static $boolSettings = array(
+	/** Settings saved as booleans */
+	const BOOL_SETTINGS = array(
 		'plumxEnabled', 'dimensionsEnabled', 'altmetricEnabled',
 		'showInline', 'showBlock',
 		'plumxHideWhenEmpty', 'plumxHidePrint', 'plumxBorder',
 		'dimensionsHideZero',
 	);
 
-	/** @var array Settings saved as strings */
-	static $stringSettings = array(
+	/** Settings saved as strings */
+	const STRING_SETTINGS = array(
 		'inlineHook', 'blockTitle',
 		'plumxWidgetType', 'plumxOrientation', 'plumxWidth',
 		'dimensionsStyle',
 		'altmetricBadgeType', 'altmetricPopover',
+	);
+
+	/** The choices of each select, as value => locale key. */
+	const OPTIONS = array(
+		'inlineHook' => array(
+			'main' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.main',
+			'details' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.details',
+			'footer' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.footer',
+		),
+		'plumxWidgetType' => array(
+			'plumx-summary' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary',
+			'plumx-details' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details',
+			'plumx-plum-print-popup' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup',
+		),
+		'plumxOrientation' => array(
+			'horizontal' => 'plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal',
+			'vertical' => 'plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical',
+		),
+		'dimensionsStyle' => array(
+			'small_circle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle',
+			'small_rectangle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle',
+			'large_rectangle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle',
+			'bar' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.bar',
+		),
+		'altmetricBadgeType' => array(
+			'donut' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut',
+			'medium-donut' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut',
+			'bar' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar',
+		),
+		'altmetricPopover' => array(
+			'right' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.right',
+			'left' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.left',
+			'top' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.top',
+			'bottom' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom',
+		),
 	);
 
 	/**
@@ -51,6 +88,11 @@ class ArticleMetricsBadgesSettingsForm extends Form {
 
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
+		foreach (self::OPTIONS as $field => $options) {
+			// Only the choices the form offers reach the page markup.
+			$this->addCheck(new FormValidatorInSet($this, $field, FORM_VALIDATOR_OPTIONAL_VALUE, 'validator.regex', array_keys($options)));
+		}
+		$this->addCheck(new FormValidatorRegExp($this, 'plumxWidth', FORM_VALIDATOR_OPTIONAL_VALUE, 'validator.regex', '/^\d{1,4}(px|%)?$/'));
 	}
 
 	/**
@@ -84,7 +126,7 @@ class ArticleMetricsBadgesSettingsForm extends Form {
 		$plugin = $this->_plugin;
 		$contextId = $this->_contextId;
 
-		foreach (array_merge(self::$boolSettings, self::$stringSettings) as $name) {
+		foreach (array_merge(self::BOOL_SETTINGS, self::STRING_SETTINGS) as $name) {
 			$this->setData($name, $plugin->getSetting($contextId, $name));
 		}
 
@@ -110,7 +152,7 @@ class ArticleMetricsBadgesSettingsForm extends Form {
 	 * @copydoc Form::readInputData()
 	 */
 	function readInputData() {
-		$this->readUserVars(array_merge(self::$boolSettings, self::$stringSettings));
+		$this->readUserVars(array_merge(self::BOOL_SETTINGS, self::STRING_SETTINGS));
 	}
 
 	/**
@@ -120,37 +162,13 @@ class ArticleMetricsBadgesSettingsForm extends Form {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'pluginName' => $this->_plugin->getName(),
-			'inlineHookOptions' => array(
-				'main' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.main',
-				'details' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.details',
-				'footer' => 'plugins.generic.articleMetricsBadges.settings.inlineHook.footer',
-			),
-			'plumxWidgetTypeOptions' => array(
-				'plumx-summary' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.summary',
-				'plumx-details' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.details',
-				'plumx-plum-print-popup' => 'plugins.generic.articleMetricsBadges.settings.plumx.widgetType.popup',
-			),
-			'plumxOrientationOptions' => array(
-				'horizontal' => 'plugins.generic.articleMetricsBadges.settings.plumx.orientation.horizontal',
-				'vertical' => 'plugins.generic.articleMetricsBadges.settings.plumx.orientation.vertical',
-			),
-			'dimensionsStyleOptions' => array(
-				'small_circle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.smallCircle',
-				'small_rectangle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.smallRectangle',
-				'large_rectangle' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.largeRectangle',
-				'bar' => 'plugins.generic.articleMetricsBadges.settings.dimensions.style.bar',
-			),
-			'altmetricBadgeTypeOptions' => array(
-				'donut' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.donut',
-				'medium-donut' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.mediumDonut',
-				'bar' => 'plugins.generic.articleMetricsBadges.settings.altmetric.badgeType.bar',
-			),
-			'altmetricPopoverOptions' => array(
-				'right' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.right',
-				'left' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.left',
-				'top' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.top',
-				'bottom' => 'plugins.generic.articleMetricsBadges.settings.altmetric.popover.bottom',
-			),
+			'settingsScriptUrl' => $request->getBaseUrl() . '/' . $this->_plugin->getPluginPath() . '/js/settingsForm.js',
+			'inlineHookOptions' => self::OPTIONS['inlineHook'],
+			'plumxWidgetTypeOptions' => self::OPTIONS['plumxWidgetType'],
+			'plumxOrientationOptions' => self::OPTIONS['plumxOrientation'],
+			'dimensionsStyleOptions' => self::OPTIONS['dimensionsStyle'],
+			'altmetricBadgeTypeOptions' => self::OPTIONS['altmetricBadgeType'],
+			'altmetricPopoverOptions' => self::OPTIONS['altmetricPopover'],
 		));
 
 		return parent::fetch($request, $template, $display);
@@ -163,10 +181,10 @@ class ArticleMetricsBadgesSettingsForm extends Form {
 		$plugin = $this->_plugin;
 		$contextId = $this->_contextId;
 
-		foreach (self::$boolSettings as $name) {
+		foreach (self::BOOL_SETTINGS as $name) {
 			$plugin->updateSetting($contextId, $name, (bool) $this->getData($name), 'bool');
 		}
-		foreach (self::$stringSettings as $name) {
+		foreach (self::STRING_SETTINGS as $name) {
 			$plugin->updateSetting($contextId, $name, (string) $this->getData($name), 'string');
 		}
 

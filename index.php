@@ -7,8 +7,8 @@
 /**
  * @file plugins/generic/articleMetricsBadges/index.php
  *
- * Copyright (c) 2026 OJSBR - STNT Tecnologia da Informacao LTDA
- * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup plugins_generic_articleMetricsBadges
  * @brief Wrapper for the Article Metrics Badges plugin.
