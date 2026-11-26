@@ -1,10 +1,10 @@
 # Article Metrics Badges — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.3%20%7C%203.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.1.1.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-3.0.0.0-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.1.0/articleMetricsBadges-1.1.1.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.1.0-ojs3.4/articleMetricsBadges-1.1.1.0-ojs3.4.tar.gz) · [OJS 3.3](https://github.com/OJSBR/articleMetricsBadges/releases/download/1.1.1.0-ojs3.3/articleMetricsBadges-1.1.1.0-ojs3.3.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/articleMetricsBadges/releases/download/5.0.0.0/articleMetricsBadges-5.0.0.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/articleMetricsBadges/releases/download/4.0.0.0/articleMetricsBadges-4.0.0.0.tar.gz) · [OJS 3.3](https://github.com/OJSBR/articleMetricsBadges/releases/download/3.0.0.0/articleMetricsBadges-3.0.0.0.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that displays article-level metric badges
 from **PlumX**, **Dimensions** and **Altmetric**. Each provider is switched on independently,
@@ -20,9 +20,9 @@ the same time.
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.1.1.0 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.1.1.0-ojs3.4 |
-| OJS 3.3.x   | [`stable-3_3_0`](../../tree/stable-3_3_0) | 1.1.1.0-ojs3.3 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 5.0.0.0 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 4.0.0.0 |
+| OJS 3.3.x   | [`stable-3_3_0`](../../tree/stable-3_3_0) | 3.0.0.0 |
 
 > **Do not rename the folder.** OJS 3.4/3.5 derive the plugin's class namespace from the
 > installation directory, so the folder must stay `articleMetricsBadges`.
@@ -176,9 +176,9 @@ ou nos dois ao mesmo tempo.
 
 | Versão do OJS | Branch | Release do plugin |
 |---------------|--------|-------------------|
-| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 1.1.1.0 |
-| OJS 3.4.x     | `stable-3_4_0` | 1.1.1.0-ojs3.4 |
-| OJS 3.3.x     | `stable-3_3_0` | 1.1.1.0-ojs3.3 |
+| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 5.0.0.0 |
+| OJS 3.4.x     | `stable-3_4_0` | 4.0.0.0 |
+| OJS 3.3.x     | `stable-3_3_0` | 3.0.0.0 |
 
 > **Não renomeie a pasta.** O OJS 3.4/3.5 deriva o namespace da classe do diretório de
 > instalação, então a pasta precisa continuar `articleMetricsBadges`.
